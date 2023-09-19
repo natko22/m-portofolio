@@ -14,7 +14,7 @@ body {
 
 h2 {
   text-align: center;
-  font-family: "rou";
+  font-family: "Roughmarker";
   font-size: 25px;
   letter-spacing: 2px;
 }
@@ -24,7 +24,8 @@ h1 {
   font-size: 250px;
   letter-spacing: 35px;
   padding-bottom: 60px;
-  color: rgba(55, 53, 53, 0.798);
+  margin-bottom: 140px;
+  color: rgba(255, 255, 255, 0.579);
 }
 
 p {
@@ -53,25 +54,11 @@ p {
   text-decoration: none;
   margin: 10px;
   padding: 20px;
-  color: black;
+  color: rgb(68, 62, 62);
   text-align: center;
-  font-family: "Roughmarker";
+  font-family: "ChamperlainDemo.Regular.ttf";
   font-size: 30px;
 }
-
-/* .logo {
-  width: 300px;
-  height: 110px;
-  border-radius: 10px;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-} */
 
 img {
   width: 600px;
@@ -90,11 +77,46 @@ img {
   align-items: center;
   justify-content: center;
   height: 100vh; /* Adjust the height as needed for your design */
-  background: url("../src/assets/25D64A73-FC1E-43D8-B523-978F9E096F5B.jpeg")
+  background: url("../src/assets/022B920C-5501-4C99-874C-13D273693215.jpeg")
     no-repeat center/100% auto; /* Adjust the background properties */
 }
 
 .centered-image {
   max-width: 100%; /* Ensure the image fits within its container */
   max-height: 100%; /* Ensure the image fits within its container */
+}
+
+/* Footer.css */
+
+.footer {
+  background-color: #33333366;
+  color: white;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  margin-top: 20px;
+  font-family: "ChamperlainDemo.Regular.ttf";
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.instagram-link {
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.instagram-icon {
+  font-size: 24px;
 }
