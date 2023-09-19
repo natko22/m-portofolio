@@ -9,12 +9,44 @@
 
 body {
   background-image: url("/src/assets/steve-johnson-YS0YJLU_h2k-unsplash.jpg");
+  /* background-color: rgb(212, 206, 198); */
+}
+
+h2 {
+  text-align: center;
+  font-family: "rou";
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+h1 {
+  text-align: center;
+  font-family: "Roughmarker";
+  font-size: 250px;
+  letter-spacing: 35px;
+  padding-bottom: 60px;
+  color: rgba(55, 53, 53, 0.798);
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.img-gallery {
+  width: 400px;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .links-container {
   display: flex;
+  flex-direction: row; /* Display links in a row */
   justify-content: center;
-  align-items: center;
 }
 
 .links {
@@ -27,24 +59,42 @@ body {
   font-size: 30px;
 }
 
-h2 {
-  text-align: center;
-  font-family: "BeautySleepDemoRegular.ttf";
-  font-size: 25px;
-  letter-spacing: 2px;
-}
-h1 {
-  text-align: center;
-  font-family: "BeautySleepDemoRegular.ttf";
-  font-size: 45px;
-  letter-spacing: 3px;
+/* .logo {
+  width: 300px;
+  height: 110px;
+  border-radius: 10px;
 }
 
-p {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+} */
+
+img {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
-.img-gallery {
-  width: 400px;
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust the height as needed for your design */
+  background: url("../src/assets/25D64A73-FC1E-43D8-B523-978F9E096F5B.jpeg")
+    no-repeat center/100% auto; /* Adjust the background properties */
+}
+
+.centered-image {
+  max-width: 100%; /* Ensure the image fits within its container */
+  max-height: 100%; /* Ensure the image fits within its container */
 }
