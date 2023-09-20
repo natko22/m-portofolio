@@ -76,9 +76,9 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Adjust the height as needed for your design */
+  height: 100vh;
   background: url("../src/assets/022B920C-5501-4C99-874C-13D273693215.jpeg")
-    no-repeat center/100% auto; /* Adjust the background properties */
+    no-repeat center/100% auto;
 }
 
 .centered-image {
@@ -93,6 +93,10 @@ img {
   color: white;
   padding: 8px 0;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer-content {
