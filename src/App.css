@@ -39,25 +39,23 @@ p {
 
 .navbar-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: center; /* Space between the two containers */
+  align-items: center; /* Center vertically within the navbar */
+  padding: 16px 20px; /* Add padding for spacing */
 }
 
 .links-container {
   display: flex;
-  flex-direction: row; /* Display links in a row */
   justify-content: center;
 }
-
 .links {
   text-decoration: none;
-  margin: 10px;
-  padding: 20px;
+  margin: 0 10px;
+  padding: 6px;
   color: rgb(68, 62, 62);
   text-align: center;
   font-family: "ChamperlainDemo.Regular.ttf";
-  font-size: 30px;
+  font-size: 20px;
 }
 
 img {
@@ -76,7 +74,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 88vh;
   background: url("../src/assets/022B920C-5501-4C99-874C-13D273693215.jpeg")
     no-repeat center/100% auto;
 }
@@ -86,12 +84,44 @@ img {
   max-height: 100%; /* Ensure the image fits within its container */
 }
 
+/* Contact.css */
+.contact-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-heading {
+  font-size: 24px;
+  color: #333; /* Dark text color */
+}
+
+.contact-email {
+  text-decoration: none;
+  color: #333; /* Adjust the color as needed */
+  margin-right: 10px; /* Add margin for spacing between the icon and email */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+.contact-email:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Contact.css */
+
+.contact-email svg {
+  margin-right: 20px; /* Add spacing between icon and text */
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+  color: #333;
+}
 /* Footer.css */
 
 .footer {
-  background-color: #33333366;
+  background-color: #333333e3;
   color: white;
-  padding: 8px 0;
+  padding: 1px 0;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -123,4 +153,60 @@ img {
 
 .instagram-icon {
   font-size: 24px;
+}
+
+.photo-grid {
+  display: flex; /* Use flexbox to arrange images in a row */
+  flex-wrap: wrap; /* Allow images to wrap to the next line if they don't fit */
+  justify-content: flex-start; /* Align images to the start of the row */
+}
+
+.photo-grid img {
+  width: 100%; /* Ensure each image takes up the full width of its container */
+  max-width: 250px; /* Adjust the maximum width of each image as needed */
+  margin: 10px; /* Add margin to create space between images */
+}
+
+/* Base styles for larger screens */
+/* ... (Your existing CSS) ... */
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url("/src/assets/steve-johnson-YS0YJLU_h2k-unsplash.jpg");
+    width: 100vw;
+  }
+
+  h1 {
+    font-size: 50px; /* Reduce the font size for better readability */
+    letter-spacing: 15px;
+    margin-bottom: 10px; /* Adjust margins for better spacing */
+    margin-right: 20px;
+  }
+
+  h2 {
+    font-size: 20px; /* Reduce the font size for better readability */
+    letter-spacing: 1px;
+  }
+
+  .img-gallery {
+    width: 100%; /* Make images responsive by using 100% width */
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: auto; /* Automatically adjust image height */
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url("../src/assets/022B920C-5501-4C99-874C-13D273693215.jpeg")
+      no-repeat center/100% auto;
+  }
+
+  .dropdown-content {
+    margin: 20px;
+  }
 }
