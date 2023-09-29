@@ -24,7 +24,12 @@ function Bridal() {
 
   return (
     <div className="gallery-container">
-      <LightGallery onInit={onInit} speed={500} plugins={[lgZoom]}>
+      <LightGallery
+        className="light-gallery"
+        onInit={onInit}
+        speed={500}
+        plugins={[lgZoom]}
+      >
         <h2>Bridal Make Up</h2>
         {images.map((image) => (
           <img
