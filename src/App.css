@@ -157,34 +157,18 @@ img {
 .instagram-icon {
   font-size: 24px;
 }
-
-.image-gallery-wrapper {
-  margin-top: 5rem;
-  max-width: 800px;
-  height: 20rem;
-  width: 100%;
-  margin: 0 auto;
-  border: 1px solid rgb(146, 129, 242);
-  box-shadow: #2b15453d 1px 10px 10px 5px;
+.bridal-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px; /* Adjust margin as needed */
 }
 
-.image-gallery-icon.image-gallery-left-nav {
-  color: #ff0000;
-  margin-right: 50px;
-  margin-top: 90px;
-  padding-right: 70px;
+.bridal-container img {
+  width: 200px; /* Set your desired width for the images */
+  height: auto;
+  margin: 10px; /* Adjust margin as needed */
 }
-.image-gallery-icon.image-gallery-right-nav {
-  color: #00ff00;
-  font-size: 24px;
-  margin-left: 50px;
-  margin-top: 90px;
-  padding-left: 70px;
-}
-.image-gallery-svg {
-  margin: 0px;
-  padding-top: 80px;
-}
+
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media screen and (max-width: 500px) {
   body {

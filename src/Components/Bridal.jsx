@@ -1,37 +1,34 @@
-// Bridal.js
 import React from "react";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
-
-// Import all images from the bridal folder
-const importAll = (r) => r.keys().map(r);
-const bridalImages = importAll(
-  require.context("../assets/bridal", false, /\.(jpg|jpeg|png|NEF|webp|JPG)$/)
-);
-console.log("bridalImages", bridalImages);
-
-// Create an array of image objects
-const images = bridalImages.map((image, index) => ({
-  id: index + 1,
-  original: image,
-  description: `Bridal Makeup ${index + 1}`,
-}));
-console.log(images);
+import LightGallery from "lightgallery/react";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import lgZoom from "lightgallery/plugins/zoom";
 
 function Bridal() {
+  const onInit = () => {
+    console.log("lightGallery has been initialized");
+  };
+
+  // Import all images from the bridal folder
+  const importAll = (r) => r.keys().map(r);
+  const bridalImages = importAll(
+    require.context("../assets/bridal", false, /\.(jpg|jpeg|png|NEF|webp|JPG)$/)
+  );
+
+  const images = bridalImages.map((image, index) => ({
+    id: index + 1,
+    original: image,
+    description: `Bridal Makeup ${index + 1}`,
+  }));
+
   return (
-    <div>
-      <h2>Bridal Make Up</h2>
-      <div className="image-gallery-wrapper">
-        <ImageGallery
-          items={images}
-          showPlayButton={false}
-          showFullscreenButton={true}
-          // slideInterval={1000}
-          slideOnThumbnailOver={false}
-          showIndex={true}
-        />
-      </div>
+    <div className="bridal-container">
+      <LightGallery onInit={onInit} speed={500} plugins={[lgZoom]}>
+        {images.map((image) => (
+          <img key={image.id} alt={image.description} src={image.original} />
+        ))}
+      </LightGallery>
     </div>
   );
 }
