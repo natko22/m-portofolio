@@ -8,9 +8,9 @@ import Beauty from "../Components/Beauty";
 function Gallery() {
   return (
     <div>
+      <Editorial />
       <Bridal />
       <Creative />
-      <Editorial />
       <Beauty />
     </div>
   );
