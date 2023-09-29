@@ -23,18 +23,19 @@ function Navbar() {
 
       <div className="links-container">
         <Link className="links" to="/">
-          Home
+          HOME
         </Link>
         <Link className="links" to="/gallery">
-          Gallery
+          GALLERY
         </Link>
         <Link className="links" to="/services">
-          Services
+          SERVICES
         </Link>
         <Link className="links" to="/about">
-          About me
+          ABOUT ME
         </Link>
       </div>
+      <div className="name-title">Manto Kamari</div>
     </div>
   );
 }

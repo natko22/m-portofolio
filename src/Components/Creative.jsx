@@ -25,7 +25,7 @@ function Creative() {
   return (
     <div className="gallery-container">
       <LightGallery speed={500} plugins={[lgZoom]}>
-        <h2>Creative Make Up</h2>
+        <h2>CREATIVE MAKE UP</h2>
 
         {images.map((image) => (
           <img

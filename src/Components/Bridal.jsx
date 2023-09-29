@@ -30,7 +30,7 @@ function Bridal() {
         speed={500}
         plugins={[lgZoom]}
       >
-        <h2>Bridal Make Up</h2>
+        <h2>BRIDAL MAKE UP</h2>
         {images.map((image) => (
           <img
             key={image.id}

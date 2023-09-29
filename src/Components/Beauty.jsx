@@ -25,7 +25,7 @@ function Beauty() {
   return (
     <div className="gallery-container">
       <LightGallery onInit={onInit} speed={500} plugins={[lgZoom]}>
-        <h2>Beauty Make Up</h2>
+        <h2>BEAUTY MAKE UP</h2>
         {images.map((image) => (
           <img
             key={image.id}

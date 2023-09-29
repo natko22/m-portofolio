@@ -12,7 +12,7 @@ function Editorial() {
     require.context(
       "../assets/editorial",
       false,
-      /\.(jpg|jpeg|png|NEF|webp|JPG)$/
+      /\.(jpg|jpeg|png|NEF|webp|JPG|PNG)$/
     )
   );
 
@@ -25,7 +25,7 @@ function Editorial() {
   return (
     <div className="gallery-container">
       <LightGallery speed={500} plugins={[lgZoom]}>
-        <h2>Editorial Make Up</h2>
+        <h2>EDITORIAL MAKE UP</h2>
 
         {images.map((image) => (
           <img
