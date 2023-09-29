@@ -157,16 +157,26 @@ img {
 .instagram-icon {
   font-size: 24px;
 }
-.bridal-container {
+
+/* Bridal image gallery */
+/* .bridal-container {
   display: flex;
-  justify-content: space-around;
-  margin: 20px; /* Adjust margin as needed */
-}
+  flex-direction: row;
+  justify-content: flex-start;
+} */
 
 .bridal-container img {
-  width: 200px; /* Set your desired width for the images */
+  width: 200px;
   height: auto;
-  margin: 10px; /* Adjust margin as needed */
+  margin: 10px;
+}
+
+/* Creative image gallery */
+
+.creative-container img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
 }
 
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
