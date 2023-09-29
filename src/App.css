@@ -11,9 +11,46 @@
 }
 
 body {
-  background-image: url("/src/assets/steve-johnson-YS0YJLU_h2k-unsplash.jpg");
+  background-image: url("/src/assets/background-image.jpg");
   /* background-color: rgb(212, 206, 198); */
 }
+/* About me  */
+.about-me-box {
+  text-align: center;
+}
+
+.profile-photo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px; /* Adjust the space between the image and the text above */
+  width: 200px;
+  height: 200px;
+}
+
+.aboutme {
+  margin-bottom: -15px; /* Adjust the space between the name and the text below */
+  font-size: 40px;
+  color: #333;
+  letter-spacing: 1px;
+  font-family: "ChamberlainDemo";
+}
+
+.aboutme-p {
+  font-family: "ChamberlainDemo";
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.3;
+  padding: 20px;
+  text-align: justify;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "ChamberlainDemo";
+}
+
+/* End about-me styles */
 
 h2 {
   text-align: center;
@@ -42,9 +79,9 @@ p {
 
 .navbar-container {
   display: flex;
-  justify-content: center; /* Space between the two containers */
-  align-items: center; /* Center vertically within the navbar */
-  padding: 16px 20px; /* Add padding for spacing */
+  justify-content: center;
+  align-items: center;
+  padding: 16px 20px;
 }
 
 .links-container {
@@ -69,13 +106,13 @@ p {
   align-items: center;
   justify-content: center;
   height: 88vh;
-  background: url("../src/assets/022B920C-5501-4C99-874C-13D273693215.jpeg")
-    no-repeat center/100% auto;
+  background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%
+    auto;
 }
 
 .centered-image {
-  max-width: 100%; /* Ensure the image fits within its container */
-  max-height: 100%; /* Ensure the image fits within its container */
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Contact.css */
@@ -86,24 +123,24 @@ p {
 
 .contact-heading {
   font-size: 24px;
-  color: #333; /* Dark text color */
+  color: #333;
 }
 
 .contact-email {
   text-decoration: none;
-  color: #333; /* Adjust the color as needed */
-  margin-right: 10px; /* Add margin for spacing between the icon and email */
-  font-size: 18px; /* Adjust the font size as needed */
+  color: #333;
+  margin-right: 10px;
+  font-size: 18px;
 }
 
 .contact-email:hover {
-  text-decoration: underline; /* Underline the link on hover */
+  text-decoration: underline;
 }
 
 /* Contact.css */
 
 .contact-email svg {
-  margin-right: 20px; /* Add spacing between icon and text */
+  margin-right: 20px;
 }
 
 .contact-email:hover {
@@ -175,7 +212,7 @@ p {
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media screen and (max-width: 569px) {
   body {
-    background-image: url("/src/assets/steve-johnson-YS0YJLU_h2k-unsplash.jpg");
+    background-image: url("/src/assets/background-image.jpg");
     width: 100vw;
   }
 
@@ -204,8 +241,8 @@ p {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background: url("../src/assets/022B920C-5501-4C99-874C-13D273693215.jpeg")
-      no-repeat center/100% auto;
+    background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%
+      auto;
   }
 
   .dropdown-content {

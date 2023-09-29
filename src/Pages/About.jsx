@@ -1,10 +1,16 @@
 import React from "react";
 
 function About() {
+  const ProfilePhoto = require("../assets/profile-photo.JPG");
   return (
     <div className="about-me-box">
-      <h2>Your Ultimate Beauty Destination</h2>
-      <p>
+      <h1 className="aboutme">Manto Kamari</h1>
+      <img className="profile-photo" src={ProfilePhoto} alt="" />
+      <h3>
+        Freelance Make Up Artist based in Berlin and Greece. Available worldwide
+        🌍
+      </h3>
+      <p className="aboutme-p">
         Dedicated to delivering top-notch beauty services, I have been a part of
         this industry since 2000. My unwavering commitment is to provide clients
         with a comprehensive range of services to enhance their look and
