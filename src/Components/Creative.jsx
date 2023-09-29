@@ -19,14 +19,21 @@ function Creative() {
   const images = creativeImages.map((image, index) => ({
     id: index + 1,
     original: image,
-    description: `Bridal Makeup ${index + 1}`,
+    description: `Creative Makeup ${index + 1}`,
   }));
 
   return (
-    <div className="creative-container">
+    <div className="gallery-container">
       <LightGallery speed={500} plugins={[lgZoom]}>
+        <h2>Creative Make Up</h2>
+
         {images.map((image) => (
-          <img key={image.id} alt={image.description} src={image.original} />
+          <img
+            key={image.id}
+            alt={image.description}
+            src={image.original}
+            loading="lazy"
+          />
         ))}
       </LightGallery>
     </div>

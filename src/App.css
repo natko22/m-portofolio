@@ -61,15 +61,6 @@ p {
   font-size: 20px;
 }
 
-img {
-  width: 600px;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
-
 /* Home.css */
 
 .home-container {
@@ -158,25 +149,27 @@ img {
   font-size: 24px;
 }
 
-/* Bridal image gallery */
-/* .bridal-container {
+/* Gallery images */
+.gallery-container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-} */
-
-.bridal-container img {
-  width: 200px;
-  height: auto;
-  margin: 10px;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  padding: 20px;
 }
 
-/* Creative image gallery */
-
-.creative-container img {
+.gallery-container img {
   width: 200px;
-  height: auto;
+  height: 200px;
   margin: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+}
+
+.gallery-container img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.1);
 }
 
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
