@@ -295,8 +295,24 @@ body .lg-backdrop {
     display: block;
     cursor: pointer;
     padding: 10px;
+    position: fixed;
+    left: 10px;
+  }
+  .icons-container {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
   }
 
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+  }
+
+  .nav-icons {
+    font-size: 20px;
+  }
   .bar {
     width: 25px;
     height: 3px;
