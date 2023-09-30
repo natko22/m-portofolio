@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <div className="navbar-container">
       <div className="icons-container">
@@ -21,19 +27,26 @@ function Navbar() {
         </a>
       </div>
 
-      <div className="links-container">
-        <Link className="links" to="/">
-          HOME
-        </Link>
-        <Link className="links" to="/gallery">
-          GALLERY
-        </Link>
-        <Link className="links" to="/services">
-          SERVICES
-        </Link>
-        <Link className="links" to="/about">
-          ABOUT ME
-        </Link>
+      <div className={`links-container ${showMenu ? "show" : ""}`}>
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <div className="menu-items">
+          <Link className="links" to="/" onClick={toggleMenu}>
+            HOME
+          </Link>
+          <Link className="links" to="/gallery" onClick={toggleMenu}>
+            GALLERY
+          </Link>
+          <Link className="links" to="/services" onClick={toggleMenu}>
+            SERVICES
+          </Link>
+          <Link className="links" to="/about" onClick={toggleMenu}>
+            ABOUT ME
+          </Link>
+        </div>
       </div>
       <div className="name-title">Manto Kamari</div>
     </div>

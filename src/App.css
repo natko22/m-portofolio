@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
   font-family: "Roughmarker";
   src: local("Roughmarker"),
@@ -19,6 +20,7 @@ body {
   background-image: url("/src/assets/background-image.jpg");
   /* background-color: rgb(212, 206, 198); */
 }
+
 /* About me  */
 .about-me-box {
   text-align: center;
@@ -78,10 +80,7 @@ p {
   font-size: 20px;
 }
 
-.img-gallery {
-  width: 400px;
-}
-
+/* NAVBAR */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -123,9 +122,9 @@ p {
   font-family: "Roughmarker";
   font-size: 25px;
 }
+/* END OF NAVBAR */
 
-/* Home.css */
-
+/* HOME PAGE */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -141,8 +140,39 @@ p {
   max-height: 100%;
 }
 
-/* Footer.css */
+/* END OF HOME PAGE */
 
+/* GALLERY IMAGES*/
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.gallery-container img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+  transition: transform 0.4s ease;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Change the opacity of the LightGallery overlay */
+body .lg-backdrop {
+  background-color: rgba(9, 9, 9, 0.692);
+}
+/* END OF GALLERY IMAGES */
+
+/* FOOTER */
 .footer {
   background-color: #333333e3;
   color: white;
@@ -179,78 +209,46 @@ p {
 .instagram-icon {
   font-size: 24px;
 }
+/* END OF FOOTER */
 
-/* Gallery images */
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 50px;
-  padding: 20px;
-}
-
-.gallery-container img {
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  border: 1px solid black;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
-  transition: transform 0.4s ease;
-  object-fit: contain;
-  background-color: #ffffff;
-}
-
-.gallery-container img:hover {
-  transform: scale(1.1);
-}
-
-/* Change the opacity of the LightGallery overlay */
-body .lg-backdrop {
-  background-color: rgba(22, 22, 22, 0.32);
-}
-
-/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
-@media screen and (max-width: 569px) {
+/* Media query for screens with a maximum width of 480px (typical for mobile devices) */
+@media all and (min-width: 320px) and (max-width: 480px) {
   body {
-    background-image: url("/src/assets/background-image.jpg");
-    width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
   }
 
   h1 {
-    font-size: 50px; /* Reduce the font size for better readability */
+    font-size: 50px;
     letter-spacing: 15px;
-    margin-bottom: 10px; /* Adjust margins for better spacing */
+    margin-bottom: 10px;
     margin-right: 20px;
   }
 
   h2 {
-    font-size: 20px; /* Reduce the font size for better readability */
+    font-size: 20px;
     letter-spacing: 1px;
   }
-
-  .img-gallery {
-    width: 100%; /* Make images responsive by using 100% width */
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto; /* Automatically adjust image height */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
   }
 
-  .home-container {
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .links-container.show .menu-items {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%
-      auto;
-  }
-
-  .dropdown-content {
-    margin: 20px;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    h1 {
-      font-size: 10px;
-    }
   }
 }
