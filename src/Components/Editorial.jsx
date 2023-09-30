@@ -1,10 +1,8 @@
 import React from "react";
 import LightGallery from "lightgallery/react";
-// import "lightgallery/css/lightgallery.css";
-// import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lightgallery.css";
 
 function Editorial() {
-  // Import all images from the bridal folder
   const importAll = (r) => r.keys().map(r);
   const editorialImages = importAll(
     require.context(
@@ -21,11 +19,16 @@ function Editorial() {
 
   return (
     <div className="gallery-container">
-      <LightGallery speed={500} download={false} counter={true}>
-        <h2>EDITORIAL MAKE UP</h2>
-
+      <h2>EDITORIAL MAKE UP</h2>
+      <LightGallery speed={500} download={false}>
         {images.map((image) => (
-          <img key={image.id} alt={image.description} src={image.original} />
+          <a key={image.id} href={image.original} className="gallery-item">
+            <img
+              alt={`Editorial Makeup ${image.id + 1}`}
+              src={image.original}
+              className="gallery-image"
+            />
+          </a>
         ))}
       </LightGallery>
     </div>
