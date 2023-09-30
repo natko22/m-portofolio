@@ -40,8 +40,8 @@ function Navbar() {
           <Link className="links" to="/gallery" onClick={toggleMenu}>
             GALLERY
           </Link>
-          <Link className="links" to="/services" onClick={toggleMenu}>
-            SERVICES
+          <Link className="links" to="/videos" onClick={toggleMenu}>
+            AUDIOVISUAL
           </Link>
           <Link className="links" to="/about" onClick={toggleMenu}>
             ABOUT ME

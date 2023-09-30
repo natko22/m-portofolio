@@ -28,15 +28,17 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  padding: 20px;
   height: 80vh;
 }
 .about-me-box {
   text-align: center;
-  max-width: 500px; /* Set a maximum width for the content */
+  max-width: 400px;
+  max-height: auto;
   padding: 50px; /* Add padding for the content inside the box */
-  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: rgba(255, 255, 255, 0.8); */
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624); */
 }
 
 .profile-photo {
@@ -50,20 +52,24 @@ body {
 }
 
 .aboutme {
-  font-size: 40px;
+  font-size: 60px;
   color: #333;
-  letter-spacing: 1px;
-  font-family: "ChamberlainDemo";
-  margin-bottom: 25px;
+  letter-spacing: 5px;
+  font-family: "Cormorant Garamond";
+  margin-bottom: 15px;
+  height: 10vh;
   margin-right: 40px;
+  white-space: nowrap;
 }
 .aboutme-h3 {
   font-size: 20px;
   color: #333;
   letter-spacing: 1px;
-  font-family: "ChamberlainDemo";
-  margin-bottom: 25px;
-  margin-right: 40px;
+  font-family: "Cormorant Garamond";
+  margin-bottom: 55px;
+  max-width: 800px;
+  margin-right: 60px;
+  white-space: nowrap;
 }
 
 .aboutme-p {
@@ -80,6 +86,9 @@ h2 {
   font-family: "Cormorant Garamond";
   font-size: 50px;
   letter-spacing: 10px;
+  padding: 40px;
+  border-top: 1px solid #000000;
+  /* border-bottom: 1px solid #000000; */
 }
 h1 {
   text-align: center;
@@ -188,6 +197,30 @@ body .lg-backdrop {
   background-color: rgba(9, 9, 9, 0.692);
 }
 /* END OF GALLERY IMAGES */
+
+/* VIDEOS */
+
+.videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+  padding-top: 40px;
+}
+.videos video {
+  padding: 50px;
+  border-top: 1px solid #000000;
+  width: 50vw;
+  padding: 40px;
+  /* margin-bottom: 20px; */
+}
+.videos a {
+  text-decoration: none;
+  color: black;
+  font-family: "Cormorant Garamond";
+  font-size: 30px;
+}
 
 /* FOOTER */
 .footer {
