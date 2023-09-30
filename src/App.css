@@ -35,7 +35,7 @@ body {
   text-align: center;
   max-width: 400px;
   max-height: auto;
-  padding: 50px; /* Add padding for the content inside the box */
+  padding: 50px;
   /* background-color: rgba(255, 255, 255, 0.8); */
   border-radius: 10px;
   /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624); */
@@ -67,9 +67,17 @@ body {
   letter-spacing: 1px;
   font-family: "Cormorant Garamond";
   margin-bottom: 55px;
-  max-width: 800px;
-  margin-right: 60px;
   white-space: nowrap;
+  text-align: center;
+}
+
+.aboutme-h3.centered {
+  text-align: center;
+  margin-left: 60px;
+}
+
+.first-line {
+  margin-bottom: 10px;
 }
 
 .aboutme-p {
@@ -88,7 +96,6 @@ h2 {
   letter-spacing: 10px;
   padding: 40px;
   border-top: 1px solid #000000;
-  /* border-bottom: 1px solid #000000; */
 }
 h1 {
   text-align: center;
