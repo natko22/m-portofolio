@@ -165,7 +165,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 88vh;
+  height: 87vh;
   background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%
     auto;
 }
@@ -237,12 +237,12 @@ body .lg-backdrop {
 .footer {
   background-color: #333333e3;
   color: white;
-  padding: 1px 0;
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  height: 40px;
 }
 
 .footer-content {
@@ -253,7 +253,7 @@ body .lg-backdrop {
 }
 
 .name {
-  margin-top: 20px;
+  margin-top: 9px;
   font-family: "ChamperlainDemo.Regular.ttf";
   color: white;
   text-decoration: none;
@@ -263,7 +263,7 @@ body .lg-backdrop {
 .instagram-link {
   text-decoration: none;
   color: white;
-  margin-top: 20px;
+  margin-top: 9px;
   padding-left: 10px;
 }
 
