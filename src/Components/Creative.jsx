@@ -8,7 +8,7 @@ function Creative() {
     require.context(
       "../assets/creative",
       false,
-      /\.(jpg|jpeg|png|NEF|webp|JPG|PNG)$/
+      /\.(jpg|jpeg|png|NEF|webp|JPG|PNG|JPEG)$/
     )
   );
 

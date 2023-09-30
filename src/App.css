@@ -22,39 +22,55 @@ body {
 }
 
 /* About me  */
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+}
 .about-me-box {
   text-align: center;
+  max-width: 500px; /* Set a maximum width for the content */
+  padding: 50px; /* Add padding for the content inside the box */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
 }
 
 .profile-photo {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 50px; /* Adjust the space between the image and the text above */
-  width: 200px;
-  height: 200px;
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 600px;
+  height: 600px;
+  padding: 40px;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
 }
 
 .aboutme {
-  margin-bottom: -15px; /* Adjust the space between the name and the text below */
   font-size: 40px;
   color: #333;
   letter-spacing: 1px;
   font-family: "ChamberlainDemo";
+  margin-bottom: 25px;
+  margin-right: 40px;
+}
+.aboutme-h3 {
+  font-size: 20px;
+  color: #333;
+  letter-spacing: 1px;
+  font-family: "ChamberlainDemo";
+  margin-bottom: 25px;
+  margin-right: 40px;
 }
 
 .aboutme-p {
   font-family: "ChamberlainDemo";
   max-width: 700px;
-  margin: 0 auto;
   line-height: 1.3;
-  padding: 20px;
-  text-align: justify;
-}
-
-h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-family: "ChamberlainDemo";
+  text-align: center;
 }
 
 /* End about-me styles */
@@ -67,6 +83,7 @@ h2 {
 }
 h1 {
   text-align: center;
+  justify-content: center;
   font-family: "Roughmarker";
   font-size: 250px;
   letter-spacing: 35px;
@@ -158,7 +175,7 @@ p {
   border: 1px solid black;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
   transition: transform 0.4s ease;
-  object-fit: cover;
+  /* object-fit: cover; */
   background-color: #ffffff;
 }
 
