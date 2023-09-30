@@ -1,9 +1,7 @@
 import React from "react";
 import LightGallery from "lightgallery/react";
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css";
-import lgZoom from "lightgallery/plugins/zoom";
+// import "lightgallery/css/lightgallery.css";
+// import "lightgallery/css/lg-thumbnail.css";
 
 function Editorial() {
   // Import all images from the bridal folder
@@ -17,23 +15,17 @@ function Editorial() {
   );
 
   const images = editorialImages.map((image, index) => ({
-    id: index + 1,
+    id: index,
     original: image,
-    description: `Editorial Makeup ${index + 1}`,
   }));
 
   return (
     <div className="gallery-container">
-      <LightGallery speed={500} plugins={[lgZoom]}>
+      <LightGallery speed={500} download={false} counter={true}>
         <h2>EDITORIAL MAKE UP</h2>
 
         {images.map((image) => (
-          <img
-            key={image.id}
-            alt={image.description}
-            src={image.original}
-            loading="lazy"
-          />
+          <img key={image.id} alt={image.description} src={image.original} />
         ))}
       </LightGallery>
     </div>

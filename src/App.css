@@ -204,8 +204,9 @@ p {
   transform: scale(1.1);
 }
 
-.light-gallery {
-  background-color: aliceblue;
+/* Change the opacity of the LightGallery overlay */
+body .lg-backdrop {
+  background-color: rgba(22, 22, 22, 0.32);
 }
 
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
