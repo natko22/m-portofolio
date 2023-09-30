@@ -27,6 +27,7 @@ function Editorial() {
               alt={`Editorial Makeup ${image.id + 1}`}
               src={image.original}
               className="gallery-image"
+              loading="lazy"
             />
           </a>
         ))}
