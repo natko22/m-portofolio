@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function Navbar() {
@@ -29,14 +29,14 @@ function Navbar() {
 
       <div className={`links-container ${showMenu ? "show" : ""}`}>
         <div className="menu-toggle" onClick={toggleMenu}>
-          {showMenu ? (
-            <div className="close-icon">&times;</div>
-          ) : (
+          {!showMenu ? (
             <>
               <div className="bar"></div>
               <div className="bar"></div>
               <div className="bar"></div>
             </>
+          ) : (
+            <FontAwesomeIcon className="close-icon" icon={faTimes} />
           )}
         </div>
         <div className={`menu-items ${showMenu ? "show" : ""}`}>
