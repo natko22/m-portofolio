@@ -277,7 +277,7 @@ body .lg-backdrop {
 /* END OF FOOTER */
 
 /* Media query for screens with a maximum width of 480px (typical for mobile devices) */
-@media all and (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 500px) {
   body {
     margin: 0 auto;
     padding: 0;
@@ -297,6 +297,8 @@ body .lg-backdrop {
     font-size: 20px;
     letter-spacing: 1px;
     text-align: center;
+    margin-right: 60px;
+    white-space: nowrap;
   }
 
   .navbar-container {
@@ -385,24 +387,23 @@ body .lg-backdrop {
   .name-title {
     display: none;
   }
+  .gallery-container {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    margin-left: 40px;
+  }
 
   .gallery-container img {
     width: 100px;
     height: 100px;
     margin: 10px;
-    margin-left: 35px;
+    /* margin-left: 35px; */
     border: 1px solid black;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
     transition: transform 0.4s ease;
     object-fit: cover;
     background-color: #ffffff;
-  }
-
-  .gallery-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
   }
 
   .videos {
