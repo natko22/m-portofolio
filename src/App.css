@@ -277,13 +277,14 @@ body .lg-backdrop {
   body {
     margin: 0 auto;
     padding: 0;
+    background-image: url("/src/assets/background-image.jpg");
   }
 
   h1 {
     font-size: 30px;
-    letter-spacing: 15px;
+    letter-spacing: 20px;
     margin-bottom: -10px;
-    margin-right: 20px;
+    margin-right: 10px;
     word-wrap: nowrap;
   }
 
@@ -347,10 +348,9 @@ body .lg-backdrop {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    width: 100vw;
-    background: url("../src/assets/home-page-photo.jpeg") no-repeat center/cover
-      auto;
+    height: 80vh;
+    background: url("../src/assets/home-page-photo.jpeg") no-repeat center/cover;
+    background-size: 170%;
   }
 
   .name-title {
