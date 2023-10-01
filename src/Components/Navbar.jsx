@@ -29,11 +29,17 @@ function Navbar() {
 
       <div className={`links-container ${showMenu ? "show" : ""}`}>
         <div className="menu-toggle" onClick={toggleMenu}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
+          {showMenu ? (
+            <div className="close-icon">&times;</div>
+          ) : (
+            <>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </>
+          )}
         </div>
-        <div className="menu-items">
+        <div className={`menu-items ${showMenu ? "show" : ""}`}>
           <Link className="links" to="/" onClick={toggleMenu}>
             HOME
           </Link>
