@@ -40,16 +40,31 @@ function Navbar() {
           )}
         </div>
         <div className={`menu-items ${showMenu ? "show" : ""}`}>
-          <Link className="links" to="/" onClick={toggleMenu}>
+          <Link target="_top" className="links" to="/" onClick={toggleMenu}>
             HOME
           </Link>
-          <Link className="links" to="/gallery" onClick={toggleMenu}>
+          <Link
+            target="_top"
+            className="links"
+            to="/gallery"
+            onClick={toggleMenu}
+          >
             GALLERY
           </Link>
-          <Link className="links" to="/videos" onClick={toggleMenu}>
+          <Link
+            target="_top"
+            className="links"
+            to="/videos"
+            onClick={toggleMenu}
+          >
             AUDIOVISUAL
           </Link>
-          <Link className="links" to="/about" onClick={toggleMenu}>
+          <Link
+            target="_top"
+            className="links"
+            to="/about"
+            onClick={toggleMenu}
+          >
             ABOUT ME
           </Link>
         </div>
