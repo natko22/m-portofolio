@@ -17,6 +17,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-image: url("/src/assets/background-image.jpg");
   /* background-color: rgb(212, 206, 198); */
 }
