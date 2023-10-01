@@ -347,6 +347,7 @@ body .lg-backdrop {
     height: 80vh;
     background: url("../src/assets/home-page-photo.jpeg") no-repeat center/cover;
     background-size: cover;
+    position: sticky;
     padding: 23px;
   }
 
