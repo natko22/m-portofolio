@@ -277,14 +277,15 @@ body .lg-backdrop {
   body {
     margin: 0 auto;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 30px;
     letter-spacing: 15px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
     margin-right: 20px;
+    word-wrap: nowrap;
   }
 
   h2 {
@@ -296,7 +297,7 @@ body .lg-backdrop {
     cursor: pointer;
     padding: 10px;
     position: fixed;
-    left: 10px;
+    right: 10px;
     transition: transform 0.5s ease;
   }
 
@@ -315,7 +316,7 @@ body .lg-backdrop {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 10px;
   }
 
   .nav-icons {
