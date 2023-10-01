@@ -103,7 +103,7 @@ h1 {
   text-align: center;
   justify-content: center;
   font-family: "Roughmarker";
-  font-size: 250px;
+  font-size: 220px;
   letter-spacing: 35px;
   padding-bottom: 60px;
   margin-bottom: 140px;
@@ -151,6 +151,10 @@ p {
   font-family: "Cormorant Garamond";
   font-size: 30px;
   /* letter-spacing: 5px; */
+}
+
+.close-icon {
+  display: none;
 }
 
 .name-title {
@@ -276,7 +280,6 @@ body .lg-backdrop {
 @media all and (min-width: 320px) and (max-width: 480px) {
   body {
     margin: 0 auto;
-    z-index: 1000;
     padding: 0;
     background-image: url("/src/assets/background-image.jpg");
   }
@@ -302,8 +305,12 @@ body .lg-backdrop {
     padding: 15px 10px;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    background-color: rgba(237, 235, 238, 255);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+  }
+
+  .navbar-container.menu-toggle {
+    z-index: 1000;
   }
 
   .nav-icons {
@@ -320,10 +327,11 @@ body .lg-backdrop {
   .menu-toggle {
     display: block;
     cursor: pointer;
-    padding: 10px;
+    padding: 0px;
     position: fixed;
-    right: 10px;
-    z-index: 1000;
+    right: 15px;
+    top: 16px; /* Adjust the top position as needed */
+    z-index: 1001;
   }
 
   .menu-items {
