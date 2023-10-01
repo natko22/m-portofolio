@@ -277,7 +277,6 @@ body .lg-backdrop {
   body {
     margin: 0 auto;
     padding: 0;
-    /* overflow-x: hidden; */
   }
 
   h1 {
@@ -298,13 +297,6 @@ body .lg-backdrop {
     padding: 10px;
     position: fixed;
     right: 10px;
-    transition: transform 0.5s ease;
-  }
-
-  .menu-toggle.show {
-    transform: scale(
-      0.8
-    ); /* Scale down the menu when it is in the "show" state */
   }
 
   .icons-container {
@@ -317,6 +309,8 @@ body .lg-backdrop {
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
+    position: sticky;
+    top: 0;
   }
 
   .nav-icons {
