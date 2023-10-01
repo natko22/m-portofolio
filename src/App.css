@@ -282,8 +282,7 @@ body .lg-backdrop {
   }
 
   h1 {
-    font-size: 25px;
-    /* font-weight: bolder; */
+    font-size: 30px;
     color: rgba(255, 255, 255, 0.579);
     letter-spacing: 15px;
     margin-bottom: -10px;
@@ -330,7 +329,7 @@ body .lg-backdrop {
   .menu-items {
     display: flex;
     flex-direction: column;
-    background-color: #dfdddd5e;
+    background-color: #4e4747f0;
     position: fixed;
     right: 0;
     top: 0;
@@ -350,7 +349,7 @@ body .lg-backdrop {
   .links {
     text-decoration: none;
     padding: 10px 0;
-    color: #0d0b0b;
+    color: #dbd9d9;
     font-weight: 900;
     font-size: 20px;
     transition: all 0.3s ease;
@@ -371,10 +370,6 @@ body .lg-backdrop {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
-    background: url("../src/assets/home-page-photo.jpeg") no-repeat center/cover;
-    background-size: cover;
-    padding: 28px;
   }
 
   .name-title {
@@ -382,8 +377,8 @@ body .lg-backdrop {
   }
 
   .gallery-container img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
     border: 1px solid black;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
