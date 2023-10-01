@@ -282,6 +282,8 @@ body .lg-backdrop {
 
   h1 {
     font-size: 20px;
+    font-weight: bolder;
+    color: #ffffff;
     letter-spacing: 15px;
     margin-bottom: -10px;
     margin-right: -10px;
