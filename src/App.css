@@ -404,7 +404,7 @@ body .lg-backdrop {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-left: 45px;
+    margin-left: 30px;
   }
 
   .gallery-container img {
@@ -461,7 +461,7 @@ body .lg-backdrop {
 
   .aboutme {
     font-size: 30px;
-    margin-left: 40px;
+    margin-left: -1px;
   }
 
   .aboutme-h3 {
@@ -470,7 +470,7 @@ body .lg-backdrop {
   }
 
   .aboutme-h3.first-line {
-    margin-left: -20px;
+    margin-left: -32px;
     margin-top: -50px;
   }
   .aboutme-h3 {
