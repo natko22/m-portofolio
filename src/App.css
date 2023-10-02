@@ -398,12 +398,13 @@ body .lg-backdrop {
   .name-title {
     display: none;
   }
+
   .gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-left: 30px;
+    margin-left: 45px;
   }
 
   .gallery-container img {
@@ -469,13 +470,13 @@ body .lg-backdrop {
   }
 
   .aboutme-h3.first-line {
-    margin-left: -30px;
+    margin-left: -20px;
     margin-top: -50px;
   }
   .aboutme-h3 {
     margin-right: 50px;
     margin-top: 50px;
-    font-size: 15px;
+    font-size: 12px;
   }
   .aboutme-p {
     margin-left: -10px;
