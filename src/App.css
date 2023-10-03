@@ -197,20 +197,23 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 3vw;
   margin-bottom: 30px;
   padding: 10px;
   gap: 10px;
 }
 
 .gallery-container img {
-  width: 350px;
-  height: 350px;
-  margin: 20px;
-  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  margin: 1vw;
+  padding: 1vw;
   border: 1px solid black;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
   transition: transform 0.4s ease;
+  object-fit: cover;
 }
 
 .gallery-container img:hover {
@@ -428,12 +431,14 @@ body .lg-backdrop {
 
   .gallery-container img {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    transition: none;
+  }
+
+  .gallery-container img:hover {
+    transform: none;
   }
 
   .videos {
