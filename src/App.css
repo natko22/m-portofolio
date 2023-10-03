@@ -288,9 +288,7 @@ body .lg-backdrop {
 
 @media (max-width: 850px) {
   body {
-    margin: 0 auto;
     overflow-x: hidden;
-    padding: 0;
     background-image: url("/src/assets/background-image.jpg") no-repeat/center;
   }
 
