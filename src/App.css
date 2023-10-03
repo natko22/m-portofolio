@@ -188,35 +188,22 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 120px;
+  align-items: center;
   margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 10px;
   gap: 10px;
 }
-.gallery-item {
-  margin: 2px;
-  text-align: center;
-  position: relative;
-}
 
-.gallery-item > img {
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  /* object-fit: cover; */
-  border-radius: 5px;
+.gallery-container img {
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  padding: 0px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
   transition: transform 0.4s ease;
 }
-
-/* .gallery-container img {
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  border: 1px solid black;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
-  transition: transform 0.4s ease;
-} */
 
 .gallery-container img:hover {
   transform: scale(1.1);
@@ -433,8 +420,8 @@ body .lg-backdrop {
   }
 
   .gallery-container img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin-left: 25px;
     margin-right: 25px;
     border: 1px solid black;
@@ -478,6 +465,7 @@ body .lg-backdrop {
     max-width: 90%;
     max-height: 50%;
     margin-top: 10px;
+    margin-bottom: 40px;
   }
 
   .profile-photo {
@@ -487,25 +475,24 @@ body .lg-backdrop {
 
   .aboutme {
     font-size: 30px;
+    margin-left: -15px;
+  }
+
+  .aboutme-h3.centered {
     margin-left: 40px;
   }
 
-  .aboutme-h3 {
-    font-size: 18px;
-    margin-left: -20px;
-  }
-
   .aboutme-h3.first-line {
-    margin-left: 15px;
+    margin-left: -35px;
     margin-top: -50px;
   }
   .aboutme-h3 {
     margin-right: 50px;
     margin-top: 50px;
-    font-size: 12px;
+    font-size: 10px;
   }
   .aboutme-p {
-    margin-left: -10px;
+    margin-left: 10px;
     font-size: 15px;
   }
 }
