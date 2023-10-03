@@ -286,12 +286,12 @@ body .lg-backdrop {
 }
 /* END OF FOOTER */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   body {
     margin: 0 auto;
     overflow-x: hidden;
     padding: 0;
-    background-image: url("/src/assets/background-image.jpg");
+    background-image: url("/src/assets/background-image.jpg") no-repeat/center;
   }
 
   h1 {
@@ -307,12 +307,12 @@ body .lg-backdrop {
   }
 
   h2 {
-    font-size: 20px;
-    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-right: 60px;
+    font-size: 6vw;
+    letter-spacing: 1px;
     white-space: nowrap;
-    margin-right: -5px;
   }
 
   .navbar-container {
@@ -424,20 +424,17 @@ body .lg-backdrop {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 3vw;
+    margin-left: 3vw;
   }
 
   .gallery-container img {
-    vertical-align: middle;
-    width: 250px;
-    height: 250px;
-    margin: 10px;
-    border: 1px solid black;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
-    /* transition: transform 0.4s ease; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
-    background-color: #ffffff;
   }
 
   .videos {
@@ -507,7 +504,7 @@ body .lg-backdrop {
   }
 
   .aboutme-h3 {
-    margin-left: 3vw;
+    margin-left: 2vw;
     display: flex;
     justify-content: center;
     margin-top: -5vh;
