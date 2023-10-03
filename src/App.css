@@ -435,6 +435,7 @@ body .lg-backdrop {
     width: 350px;
     height: 350px;
     object-fit: cover;
+    transition: none;
   }
 
   .videos {
