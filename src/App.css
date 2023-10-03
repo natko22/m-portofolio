@@ -183,6 +183,7 @@ p {
 /* END OF HOME PAGE */
 
 /* GALLERY IMAGES*/
+
 /* .gallery-container {
   display: flex;
   flex-direction: column;
@@ -286,7 +287,7 @@ body .lg-backdrop {
 /* END OF FOOTER */
 
 /* Media query for screens with a maximum width of 500px (typical for mobile devices) */
-@media (max-width: 500px) {
+@media (min-width: 475px) {
   body {
     margin: 0 auto;
     overflow-x: hidden;
@@ -363,6 +364,22 @@ body .lg-backdrop {
     transition: all 0.3s ease;
   }
 
+  /* Overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 9999; /* Make sure the overlay is on top of other elements */
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
   .links-container.show .menu-items {
     transform: translateX(0);
   }
@@ -404,12 +421,12 @@ body .lg-backdrop {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-left: 30px;
+    margin-left: 40px;
   }
 
   .gallery-container img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     margin-left: 25px;
     margin-right: 25px;
     border: 1px solid black;
@@ -461,7 +478,7 @@ body .lg-backdrop {
 
   .aboutme {
     font-size: 30px;
-    margin-left: -1px;
+    margin-left: 40px;
   }
 
   .aboutme-h3 {
@@ -470,7 +487,7 @@ body .lg-backdrop {
   }
 
   .aboutme-h3.first-line {
-    margin-left: -32px;
+    margin-left: 15px;
     margin-top: -50px;
   }
   .aboutme-h3 {

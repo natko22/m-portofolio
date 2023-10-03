@@ -11,6 +11,11 @@ function Navbar() {
     setShowMenu(!showMenu);
   };
 
+  const closeMenu = (e) => {
+    setShowMenu(false);
+    e.stopPropagation(); // Stop the click event from propagating
+  };
+
   return (
     <div className="navbar-container">
       <div className="icons-container">
@@ -40,16 +45,40 @@ function Navbar() {
           )}
         </div>
         <div className={`menu-items ${showMenu ? "show" : ""}`}>
-          <Link className="links" to="/" onClick={toggleMenu}>
+          <Link
+            className="links"
+            to="/"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
             HOME
           </Link>
-          <Link className="links" to="/gallery" onClick={toggleMenu}>
+          <Link
+            className="links"
+            to="/gallery"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
             GALLERY
           </Link>
-          <Link className="links" to="/videos" onClick={toggleMenu}>
+          <Link
+            className="links"
+            to="/videos"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
             AUDIOVISUAL
           </Link>
-          <Link className="links" to="/about" onClick={toggleMenu}>
+          <Link
+            className="links"
+            to="/about"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
             ABOUT ME
           </Link>
         </div>
