@@ -184,32 +184,39 @@ p {
 
 /* GALLERY IMAGES*/
 
-/* .gallery-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 50px;
-} */
-
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 120px;
   margin-left: 50px;
   gap: 10px;
 }
+.gallery-item {
+  margin: 2px;
+  text-align: center;
+  position: relative;
+}
 
-.gallery-container img {
+.gallery-item > img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  /* object-fit: cover; */
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+  transition: transform 0.4s ease;
+}
+
+/* .gallery-container img {
   width: 300px;
   height: 300px;
   margin: 10px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
   transition: transform 0.4s ease;
-  /* object-fit: cover; */
-  background-color: #ffffff;
-}
+} */
 
 .gallery-container img:hover {
   transform: scale(1.1);
@@ -222,7 +229,6 @@ body .lg-backdrop {
 /* END OF GALLERY IMAGES */
 
 /* VIDEOS */
-
 .videos {
   display: flex;
   justify-content: center;
@@ -286,8 +292,10 @@ body .lg-backdrop {
 }
 /* END OF FOOTER */
 
+/*  */
+
 /* Media query for screens with a maximum width of 500px (typical for mobile devices) */
-@media (min-width: 475px) {
+@media (min-width: 300px) and (max-width: 800px) {
   body {
     margin: 0 auto;
     overflow-x: hidden;
@@ -296,7 +304,7 @@ body .lg-backdrop {
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 25px;
     color: rgba(255, 255, 255, 0.579);
     letter-spacing: 15px;
     margin-bottom: -10px;
@@ -310,6 +318,7 @@ body .lg-backdrop {
     text-align: center;
     margin-right: 60px;
     white-space: nowrap;
+    margin-right: -5px;
   }
 
   .navbar-container {
@@ -343,7 +352,7 @@ body .lg-backdrop {
     cursor: pointer;
     padding: 0px;
     position: fixed;
-    right: 35px;
+    right: 20px;
     top: 16px;
     z-index: 1001;
   }
@@ -419,14 +428,13 @@ body .lg-backdrop {
   .gallery-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-left: 40px;
+    align-items: center;
+    margin-right: 50px;
   }
 
   .gallery-container img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-left: 25px;
     margin-right: 25px;
     border: 1px solid black;
@@ -435,6 +443,7 @@ body .lg-backdrop {
     object-fit: cover;
     background-color: #ffffff;
   }
+
   .videos {
     padding: 10px;
     margin: 10px;
