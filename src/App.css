@@ -230,10 +230,16 @@ body .lg-backdrop {
 }
 
 .videos video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50vw;
   padding: 4vw;
 }
 .videos a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: black;
   font-family: "Cormorant Garamond";
@@ -418,17 +424,11 @@ body .lg-backdrop {
   }
 
   .videos {
-    display: flex;
-    text-align: center;
-    justify-content: center;
     align-items: center;
     padding: 2vw;
     margin: -10px;
   }
   .videos video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin: 10;
     width: 70vw;
@@ -436,10 +436,6 @@ body .lg-backdrop {
   }
 
   .videos a {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     color: black;
     font-family: "Cormorant Garamond";
