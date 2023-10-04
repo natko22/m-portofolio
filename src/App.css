@@ -281,7 +281,7 @@ body .lg-backdrop {
 }
 /* END OF FOOTER */
 
-@media (max-width: 1310px) {
+@media (max-width: 850px) {
   body {
     overflow-x: hidden;
     background-image: url("/src/assets/background-image.jpg") no-repeat/center;
