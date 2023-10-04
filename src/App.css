@@ -10,12 +10,6 @@
     url("../src/Fonts/CormorantGaramond-Bold.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "BeautySleepDemoRegular";
-  src: local("BeautySleepDemoRegular"),
-    url("../src/Fonts/BeautySleepDemoRegular.ttf") format("truetype");
-}
-
 body {
   overflow-x: hidden;
   /* background-image: url("/src/assets/background-image.jpg"); */
@@ -412,11 +406,12 @@ body .lg-backdrop {
   }
 
   .gallery-container img {
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: 200px;
+    /* display: flex;
+    align-items: center; */
+    width: 80px;
+    height: 80px;
     object-fit: cover;
+    margin: 10px;
   }
 
   .gallery-container img:hover {
