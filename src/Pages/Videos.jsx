@@ -5,7 +5,14 @@ import video2 from "../assets/videos/joined_video_7682d226ff544778bac830cf87f264
 function Videos() {
   return (
     <div className="videos">
-      <Link>www.ramarexclusive.com</Link>
+      <a
+        href="http://www.ramarexclusive.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        www.ramarexclusive.com
+      </a>
+
       <video width="640" height="360" controls>
         <source src={myVideo} type="video/mp4" />
         Your browser does not support the video tag.
