@@ -57,16 +57,17 @@ body {
   color: #333;
   letter-spacing: 5px;
   font-family: "Cormorant Garamond";
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   height: 10vh;
   margin-right: -10px;
   white-space: nowrap;
   text-align: center;
-  margin-top: -10px;
+  margin-top: 12px;
 }
 .aboutme-h3 {
   font-size: 20px;
   font-family: "Cormorant Garamond";
+  margin-top: -5vh;
   margin-bottom: 6vh;
   white-space: nowrap;
   text-align: center;
@@ -74,7 +75,7 @@ body {
 
 .aboutme-h3-centered {
   margin-left: 1vw;
-  margin-top: -2vh;
+  margin-top: -3vh;
   padding: 1vw;
   font-family: "Cormorant Garamond";
   font-size: 1vw;
