@@ -422,8 +422,8 @@ body .lg-backdrop {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 10vw;
-    margin: 10px;
+    padding: 2vw;
+    margin: -10px;
   }
   .videos video {
     display: flex;
@@ -432,7 +432,7 @@ body .lg-backdrop {
     flex-direction: column;
     margin: 10;
     width: 70vw;
-    height: 70vh;
+    height: auto;
   }
 
   .videos a {
@@ -444,7 +444,8 @@ body .lg-backdrop {
     color: black;
     font-family: "Cormorant Garamond";
     font-size: 3vw;
-    margin-bottom: -1vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     border-top: 1px solid black;
   }
 
