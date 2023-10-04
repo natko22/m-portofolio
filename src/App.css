@@ -18,8 +18,9 @@
 
 body {
   overflow-x: hidden;
-  background-image: url("/src/assets/background-image.jpg");
-  /* background-color: rgb(212, 206, 198); */
+  /* background-image: url("/src/assets/background-image.jpg"); */
+
+  background-color: rgb(255, 255, 255);
 }
 
 /* About me  */
@@ -150,7 +151,7 @@ p {
   text-align: center;
   justify-content: center;
   font-family: "Cormorant Garamond";
-  font-size: 30px;
+  font-size: 25px;
   /* letter-spacing: 5px; */
 }
 
