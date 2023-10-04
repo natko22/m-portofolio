@@ -9,14 +9,12 @@ function About() {
       </div>
       <div className="about-me-box">
         <h1 className="aboutme">Manto Kamari</h1>
-        <h3 className="aboutme-h3 ">
+        <p className="aboutme-h3 ">
           Freelance Make Up Artist based in Berlin and Greece.
-        </h3>
-        <h3 className="aboutme-h3-centered">Available worldwide 🌍</h3>
-
-        <p className="aboutme-p">
-          Professional Make Up Artist studied at I.I.E.K. MORFI, KEPANSI
         </p>
+        <p className="aboutme-h3-centered">Available worldwide 🌍</p>
+
+        <p className="aboutme-p">Studied at I.I.E.K. MORFI, KEPANSI</p>
       </div>
     </div>
   );

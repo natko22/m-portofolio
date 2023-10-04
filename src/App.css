@@ -120,7 +120,7 @@ h1 {
 }
 
 p {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Cormorant Garamond";
   font-size: 20px;
 }
 
@@ -289,7 +289,7 @@ body .lg-backdrop {
 }
 /* END OF FOOTER */
 
-@media (max-width: 850px) {
+@media (max-width: 1310px) {
   body {
     overflow-x: hidden;
     background-image: url("/src/assets/background-image.jpg") no-repeat/center;
@@ -299,7 +299,7 @@ body .lg-backdrop {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 10vw;
+    font-size: 9vw;
     color: rgba(255, 255, 255, 0.579);
     letter-spacing: 4vw;
     margin-bottom: -10px;
