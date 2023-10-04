@@ -430,10 +430,9 @@ body .lg-backdrop {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 30px;
     margin: 10;
     width: 70vw;
-    height: auto;
+    height: 70vh;
   }
 
   .videos a {
