@@ -13,7 +13,7 @@ function Navbar() {
 
   const closeMenu = (e) => {
     setShowMenu(false);
-    e.stopPropagation(); // Stop the click event from propagating
+    e.stopPropagation();
   };
 
   return (
