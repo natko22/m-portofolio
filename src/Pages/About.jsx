@@ -1,7 +1,7 @@
 import React from "react";
 
 function About() {
-  const ProfilePhoto = require("../assets/IMG_3813.JPG");
+  const ProfilePhoto = require("../assets/aboutme-photo.JPG");
   return (
     <div className="about-me-container">
       <div>

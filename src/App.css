@@ -220,25 +220,21 @@ body .lg-backdrop {
 /* VIDEOS */
 .videos {
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  /* height: 80vh; */
   flex-direction: column;
   padding-top: 5vh;
   margin-top: 20vh;
 }
 
 .videos video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50vw;
   padding: 4vw;
+  height: auto;
 }
 .videos a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   color: black;
   font-family: "Cormorant Garamond";
@@ -286,7 +282,7 @@ body .lg-backdrop {
 }
 /* END OF FOOTER */
 
-@media only screen and (max-width: 850px) {
+@media screen and (max-width: 640px) {
   body {
     overflow-x: hidden;
     background-image: url("/src/assets/background-image.jpg") no-repeat/center;
@@ -411,27 +407,21 @@ body .lg-backdrop {
   }
 
   .videos {
-    align-items: center;
-    padding: 4vw;
-    margin: -10px;
+    padding-top: 1px;
+    margin-bottom: 30px;
   }
-  .videos video {
-    flex-direction: column;
+
+  /* .videos video {
     margin: 10;
-    width: 70vw;
+    width: 60vw;
     height: auto;
-  }
+  } */
 
   .videos a {
-    text-decoration: none;
-    color: black;
-    font-family: "Cormorant Garamond";
-    font-size: 3vw;
+    font-size: 5vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    border-top: 1px solid black;
   }
-
   .about-me-container {
     padding: 50px;
     display: flex;
