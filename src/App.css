@@ -91,8 +91,10 @@ h2 {
   font-family: "Cormorant Garamond";
   font-size: 50px;
   letter-spacing: 10px;
-  padding: 40px;
+  padding: 30px;
   border-top: 1px solid #000000;
+  margin-left: 90px;
+  margin-right: 90px;
 }
 h1 {
   display: flex;
@@ -167,7 +169,7 @@ p {
   justify-content: center;
   height: 87vh;
   background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%;
-  background-position: center center; /* Fixed vertical position */
+  background-position: center center;
 }
 
 .centered-image {
@@ -179,16 +181,16 @@ p {
 
 /* GALLERY IMAGES*/
 
-.gallery-container .lg {
+.gallery-container {
   display: flex;
+  text-align: center;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  /* margin-left: 3vw;
-  margin-bottom: 30px; */
+  /* align-items: center; */
   padding: 10px;
   margin: 0 auto;
   max-width: 100%;
+  margin-bottom: 30px;
 }
 .gallery-item {
   margin: 10px;
@@ -197,8 +199,8 @@ p {
 .gallery-container img {
   align-items: center;
   justify-content: center;
-  width: 290px;
-  height: 290px;
+  width: 350px;
+  height: 350px;
   margin: 1vw;
   /* border: 1px solid black; */
   border-radius: 5px;
@@ -225,12 +227,11 @@ body .lg-backdrop {
   align-items: center;
   /* height: 80vh; */
   flex-direction: column;
-  padding-top: 5vh;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
 
 .videos video {
-  width: 50vw;
+  width: 25vw;
   padding: 4vw;
   height: auto;
 }
@@ -282,7 +283,7 @@ body .lg-backdrop {
 }
 /* END OF FOOTER */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) and (min-width: 300px) {
   body {
     overflow-x: hidden;
     /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
@@ -476,6 +477,129 @@ body .lg-backdrop {
     font-family: "Cormorant Garamond";
   }
   /* For Tablet View */
-  @media screen and (min-width: 768px) and (max-device-width: 1024px) {
+  @media screen and (max-width: 1200px) {
+    body {
+      overflow-x: hidden;
+      /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 9vw;
+      color: rgba(255, 255, 255, 0.579);
+      letter-spacing: 4vw;
+      margin-bottom: -10px;
+      margin-right: -10px;
+      white-space: nowrap;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      background-color: #fbfbfb6c;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+    }
+
+    .nav-icons {
+      font-size: 20px;
+    }
+
+    .links {
+      text-decoration: none;
+      padding: 10px 0;
+      color: #dbd9d9;
+      font-weight: 900;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .home-container {
+      text-align: center;
+      /* height: 85vh; */
+      background-position: center center;
+    }
+
+    .gallery-container {
+      text-align: center;
+      margin-bottom: 10vh;
+    }
+
+    .gallery-container img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .videos {
+      padding: 5vw;
+      margin: 0;
+    }
+
+    .videos video {
+      width: 60vw;
+    }
+
+    .videos a {
+      font-size: 5vw;
+      margin-top: 3vh;
+      margin-bottom: 3vh;
+    }
+    .about-me-container {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      margin-top: -2vh;
+    }
+
+    .about-me-box {
+      max-width: 90%;
+      max-height: 50%;
+      margin-top: 10px;
+      margin-bottom: 5vh;
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      margin-right: 5vw;
+    }
+
+    .aboutme {
+      font-size: 8vw;
+      margin-left: -4vw;
+      margin-top: -2vh;
+      text-align: center;
+      justify-content: center;
+      font-family: "Cormorant Garamond";
+    }
+
+    .aboutme-h3-centered {
+      margin-left: 2vw;
+      font-family: "Cormorant Garamond";
+      font-size: 3vw;
+      height: 5vh;
+    }
+
+    .aboutme-h3 {
+      margin-left: 2vw;
+      display: flex;
+      justify-content: center;
+      margin-top: -5vh;
+      font-family: "Cormorant Garamond";
+      font-size: 3vw;
+    }
+
+    .aboutme-p {
+      margin-left: 2vw;
+      height: 2vh;
+      font-size: 3vw;
+      font-family: "Cormorant Garamond";
+    }
   }
 }
