@@ -293,10 +293,8 @@ body .lg-backdrop {
   }
 
   h1 {
-    display: flex;
-    justify-content: center;
     text-align: center;
-    font-size: 9vw;
+    font-size: 10vw;
     color: rgba(255, 255, 255, 0.579);
     letter-spacing: 4vw;
     margin-bottom: -10px;
@@ -305,12 +303,12 @@ body .lg-backdrop {
   }
 
   h2 {
-    display: flex;
-    justify-content: center;
     text-align: center;
-    font-size: 6vw;
+    font-size: 5vw;
     letter-spacing: 1px;
     white-space: nowrap;
+    padding: 20px 0;
+    margin: 30px;
   }
 
   .navbar-container {
@@ -390,47 +388,22 @@ body .lg-backdrop {
   }
 
   .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+    text-align: center;
+    height: 85vh;
   }
 
   .name-title {
     display: none;
   }
 
-  /* .gallery-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%;
-  }
-
-  .gallery-container img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    margin: 10px;
-  } */
-
   .gallery-container {
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .gallery-item {
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%;
-    padding: 10px;
+    margin-bottom: 10vh;
   }
 
   .gallery-container img {
-    width: 80px; /* Adjust the image size for smaller screens */
-    height: 80px; /* Adjust the image size for smaller screens */
+    width: 90px;
+    height: 90px;
   }
 
   .gallery-container img:hover {
