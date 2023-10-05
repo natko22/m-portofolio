@@ -411,11 +411,11 @@ body .lg-backdrop {
     margin-bottom: 30px;
   }
 
-  /* .videos video {
+  .videos video {
     margin: 10;
     width: 60vw;
     height: auto;
-  } */
+  }
 
   .videos a {
     font-size: 5vw;
