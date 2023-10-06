@@ -114,6 +114,7 @@ p {
 }
 
 /* NAVBAR */
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -125,6 +126,9 @@ p {
   color: black;
   font-size: 30px;
   padding: 5px;
+}
+.nav-icons :hover {
+  color: #ada9a9;
 }
 
 .icons-container {
@@ -149,6 +153,11 @@ p {
   font-family: "Cormorant Garamond";
   font-size: 25px;
   /* letter-spacing: 5px; */
+}
+
+.links-container a:hover {
+  color: #ada9a9;
+  font-style: italic;
 }
 
 .name-title {
