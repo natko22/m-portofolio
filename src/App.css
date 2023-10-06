@@ -13,7 +13,6 @@
 body {
   overflow-x: hidden;
   /* background-image: url("/src/assets/background-image.jpg"); */
-
   background-color: rgb(255, 255, 255);
 }
 
@@ -96,6 +95,7 @@ h2 {
   margin-left: 90px;
   margin-right: 90px;
 }
+
 h1 {
   display: flex;
   text-align: center;
@@ -192,7 +192,6 @@ p {
   align-items: center;
   justify-content: center;
   height: 87vh;
-  background-attachment: fixed;
   background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%;
   background-position: center center;
 }
@@ -306,9 +305,10 @@ body .lg-backdrop {
 .instagram-icon {
   font-size: 24px;
 }
+
 /* END OF FOOTER */
 
-@media screen and (max-width: 850px) and (min-width: 300px) {
+@media screen and (max-width: 1024px) and (min-width: 200px) {
   body {
     overflow-x: hidden;
     /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
