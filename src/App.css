@@ -105,23 +105,24 @@ h1 {
   letter-spacing: 3vw;
   padding-bottom: 6vh;
   margin-bottom: 5vh;
-  color: transparent;
-  background-image: linear-gradient(
+}
+/* color: transparent; */
+/* background-image: linear-gradient(
     rgba(255, 255, 255, 0.579),
     rgba(255, 255, 255, 0.579)
   );
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   animation: backcolor 12s linear infinite alternate;
-}
-@keyframes backcolor {
+} */
+/* @keyframes backcolor {
   50% {
     background-position: 100vw 0;
   }
   100% {
     background-position: 0 0;
   }
-}
+} */
 
 p {
   font-family: "Cormorant Garamond";
@@ -328,20 +329,20 @@ body .lg-backdrop {
     letter-spacing: 4vw;
     margin-bottom: -10px;
     margin-right: -10px;
-    color: transparent;
+    /* color: transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0.579));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    animation: backcolor 12s linear infinite alternate;
+    animation: backcolor 12s linear infinite alternate; */
   }
-  @keyframes backcolor {
+  /* @keyframes backcolor {
     50% {
       background-position: 100vw 0;
     }
     100% {
       background-position: 0 0;
     }
-  }
+  } */
 
   h2 {
     text-align: center;
