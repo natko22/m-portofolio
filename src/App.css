@@ -300,6 +300,7 @@ body .lg-backdrop {
   }
 
   h1 {
+    text-align: center;
     font-size: 9vw;
     letter-spacing: 4vw;
     margin-bottom: -10px;
