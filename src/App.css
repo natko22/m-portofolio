@@ -98,13 +98,14 @@ h2 {
 
 h1 {
   display: flex;
+  align-items: center;
   text-align: center;
   justify-content: center;
   font-family: "Roughmarker";
   font-size: 12vw;
   letter-spacing: 3vw;
   padding-bottom: 6vh;
-  margin-bottom: 5vh;
+  margin-bottom: 9vh;
   color: rgba(255, 255, 255, 0.579);
 }
 
@@ -293,7 +294,7 @@ body .lg-backdrop {
 
 /* END OF FOOTER */
 
-@media screen and (max-width: 1024px) and (min-width: 200px) {
+@media screen and (max-width: 850px) and (min-width: 200px) {
   body {
     overflow-x: hidden;
     /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
