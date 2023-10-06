@@ -431,6 +431,7 @@ body .lg-backdrop {
     text-align: center;
     height: 85vh;
     background-position: center center;
+    background-attachment: fixed;
   }
 
   .name-title {
