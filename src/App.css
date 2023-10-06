@@ -105,7 +105,7 @@ h1 {
   font-size: 12vw;
   letter-spacing: 3vw;
   padding-bottom: 6vh;
-  margin-bottom: vh;
+  margin-bottom: 5vh;
   color: rgba(255, 255, 255, 0.579);
 }
 
@@ -294,7 +294,7 @@ body .lg-backdrop {
 
 /* END OF FOOTER */
 
-@media screen and (max-width: 850px) and (min-width: 300px) {
+@media screen and (max-width: 1024px) and (min-width: 200px) {
   body {
     overflow-x: hidden;
     /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
@@ -304,7 +304,7 @@ body .lg-backdrop {
     text-align: center;
     font-size: 9vw;
     letter-spacing: 4vw;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
     margin-right: -10px;
   }
 
@@ -397,7 +397,6 @@ body .lg-backdrop {
     text-align: center;
     height: 85vh;
     background-position: center center;
-    background-attachment: fixed;
   }
 
   .name-title {
