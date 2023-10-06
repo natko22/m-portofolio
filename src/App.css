@@ -192,6 +192,7 @@ p {
   align-items: center;
   justify-content: center;
   height: 87vh;
+  background-attachment: fixed;
   background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%;
   background-position: center center;
 }
