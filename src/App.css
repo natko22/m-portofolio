@@ -12,6 +12,8 @@
 
 body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   /* background-image: url("/src/assets/background-image.jpg"); */
   background-color: rgb(255, 255, 255);
 }
@@ -180,6 +182,13 @@ p {
   height: 87vh;
   background: url("../src/assets/home-page-photo.jpeg") no-repeat center/100%;
   background-position: center center;
+  margin: 0;
+  padding: 0;
+}
+@-moz-document url-prefix() {
+  .home-container {
+    height: 87.5vh;
+  }
 }
 
 .centered-image {
