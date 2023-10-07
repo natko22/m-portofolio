@@ -1,6 +1,6 @@
 <p align="center"><img src="./src/assets/home-page-photo.jpeg" width="250px" /></p>
 
- <p align="center">  MAKE UP ARTIST PORTOFOLIO</p>
+ <p align="center">  MAKE UP ARTIST'S PORTOFOLIO</p>
 
 Welcome to the Makeup Artist Portfolio project! This web application is a portfolio website for a makeup artist, showcasing her work using React.js and LightGallery. The site is live and deployed on Netlify, allowing everyone to explore the stunning makeup artistry of our talented artist.
 
