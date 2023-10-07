@@ -11,8 +11,7 @@
 }
 
 body {
-  background-attachment: fixed; /* Make the background image fixed */
-
+  /* background-attachment: fixed;  */
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -100,7 +99,7 @@ h2 {
   margin-right: 90px;
 }
 
-h1 {
+/* h1 {
   display: flex;
   align-items: center;
   text-align: center;
@@ -111,8 +110,35 @@ h1 {
   padding-bottom: 6vh;
   margin-bottom: 5vh;
   color: rgba(255, 255, 255, 0.579);
-}
+} */
 
+h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Roughmarker";
+  font-size: 12vw;
+  letter-spacing: 3vw;
+  padding-bottom: 6vh;
+  margin-bottom: 5vh;
+  color: rgba(255, 255, 255, 0.579);
+  /* color: transparent;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.579),
+    rgba(255, 255, 255, 0.579)
+  );
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  animation: backcolor 12s linear 1 forwards; /* Set animation-iteration-count to 1 and fill-mode to forwards */
+}
+/* @keyframes backcolor {
+  50% {
+    background-position: 100vw 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+} */
 p {
   font-family: "Cormorant Garamond";
   font-size: 20px;
@@ -307,29 +333,27 @@ body .lg-backdrop {
 
 @media screen and (max-width: 1024px) and (min-width: 200px) {
   body {
-    background-attachment: fixed; /* Make the background image fixed */
     overflow-x: hidden;
-    background-size: cover;
-    background-position: center center;
+
     /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 9vw;
+    letter-spacing: 4vw;
+    margin-bottom: -2vh;
+    margin-right: -3vw;
   }
 
   /* h1 {
     text-align: center;
     font-size: 9vw;
     letter-spacing: 4vw;
-    margin-bottom: -2vh;
-    margin-right: -3vw;
-  } */
-
-  h1 {
-    text-align: center;
-    font-size: 10vw;
-    letter-spacing: 4vw;
     margin-bottom: 5vh;
     margin-right: -3vw;
     background-attachment: fixed;
-  }
+  } */
 
   h2 {
     text-align: center;
@@ -416,18 +440,10 @@ body .lg-backdrop {
     transition: all 0.3s ease;
   }
 
-  /* .home-container {
+  .home-container {
     text-align: center;
     height: 85vh;
     background-position: center center;
-  } */
-
-  .home-container {
-    text-align: center;
-    height: 100vh; /* Set the height to 100vh to cover the entire viewport */
-    background: url("../src/assets/home-page-photo.jpeg") no-repeat center
-      center/cover;
-    background-attachment: fixed;
   }
 
   .name-title {
