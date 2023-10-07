@@ -11,7 +11,7 @@ function Footer() {
           Manto Kamari © 2023
         </Link>
         <a
-          href="https://www.instagram.com/mantomakeupartist/"
+          href="https://www.instagram.com/mantokamarimakeupartist/"
           target="_blank"
           rel="noopener noreferrer"
           className="instagram-link"
