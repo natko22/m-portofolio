@@ -20,7 +20,7 @@ function Navbar() {
     <div className="navbar-container">
       <div className="icons-container">
         <a
-          href="https://www.instagram.com/mantomakeupartist/"
+          href="https://www.instagram.com/mantokamarimakeupartist/"
           target="_blank"
           rel="noopener noreferrer"
           className="icon"
