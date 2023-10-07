@@ -55,3 +55,7 @@ We welcome contributions from the community! If you find any issues or have sugg
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For any questions or inquiries, please contact [Natassa Tsapanidou-Kornilaki](https://github.com/natko22).
