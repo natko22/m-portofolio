@@ -1,11 +1,13 @@
 /* FONTS */
 @font-face {
   font-family: "Roughmarker";
+  font-display: auto;
   src: local("Roughmarker"),
     url("../src/Fonts/Roughmarker.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cormorant Garamond";
+  font-display: auto;
   src: local("Cormorant Garamond"),
     url("../src/Fonts/CormorantGaramond-Bold.ttf") format("truetype");
 }
