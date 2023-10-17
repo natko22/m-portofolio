@@ -1,6 +1,12 @@
 {
   "short_name": "Manto Kamari",
   "name": "Manto Kamari Pro Make Up Artist",
+  "description": "Manto Kamari is a professional make-up artist specializing in creative and artistic makeup looks.",
+
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "android-chrome-512x512.png",
@@ -11,10 +17,16 @@
       "src": "apple-touch-icon.png",
       "type": "image/png",
       "sizes": "180x180"
+    },
+    {
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
