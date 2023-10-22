@@ -27,7 +27,12 @@ function Navbar() {
         >
           <FontAwesomeIcon className="nav-icons" icon={faInstagram} />
         </a>
-        <a href="mailto:mantwkamari@gmail.com" className="icon">
+        <a
+          href="mailto:mantwkamari@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon"
+        >
           <FontAwesomeIcon className="nav-icons" icon={faEnvelope} />
         </a>
       </div>
