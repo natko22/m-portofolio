@@ -24,7 +24,8 @@ function Editorial() {
         {images.map((image) => (
           <a key={image.id} href={image.original} className="gallery-item">
             <img
-              alt={`Editorial Makeup ${image.id + 1}`}
+              alt=""
+              // {`Editorial Makeup ${image.id + 1}`}
               src={image.original}
               className="gallery-image"
               loading="lazy"

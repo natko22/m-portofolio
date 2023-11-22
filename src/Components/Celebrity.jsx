@@ -24,7 +24,7 @@ function Celebrity() {
         {images.map((image) => (
           <a key={image.id} href={image.original} className="gallery-item">
             <img
-              alt={`Celebrity Makeup ${image.id + 1}`}
+              alt=""
               src={image.original}
               className="gallery-image"
               loading="lazy"
