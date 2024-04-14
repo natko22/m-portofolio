@@ -70,6 +70,15 @@ function Navbar() {
           </Link>
           <Link
             className="links"
+            to="/published"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            PUBLISHED PHOTOS{" "}
+          </Link>
+          <Link
+            className="links"
             to="/videos"
             onClick={() => {
               closeMenu();

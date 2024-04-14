@@ -262,6 +262,11 @@ p {
   transform: scale(1.1);
 }
 
+#published img {
+  width: 500px;
+  height: 500px;
+}
+
 /* Change the opacity of the LightGallery overlay */
 body .lg-backdrop {
   background-color: rgba(9, 9, 9, 0.692);

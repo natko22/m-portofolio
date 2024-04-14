@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Videos from "./Pages/Videos";
+import PublishedPhotos from "./Pages/Published";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/published" element={<PublishedPhotos />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/about" element={<About />} />
       </Routes>
