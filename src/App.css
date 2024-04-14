@@ -471,6 +471,11 @@ body .lg-backdrop {
     transform: none;
   }
 
+  #published img {
+    width: 400px;
+    height: 400px;
+  }
+
   .videos {
     padding: 5vw;
     margin: 0;
