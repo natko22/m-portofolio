@@ -17,8 +17,16 @@ function PublishedPhotos() {
     original: image,
   }));
 
+  const handleTouchMove = (event) => {
+    event.stopPropagation(); // This stops the touch event from bubbling up to parent elements
+  };
+
   return (
-    <div className="gallery-container" id="published">
+    <div
+      className="gallery-container"
+      id="published"
+      onTouchMove={handleTouchMove}
+    >
       <h2>PUBLISHED</h2>
       <LightGallery speed={500} download={false}>
         {images.map((image) => (
