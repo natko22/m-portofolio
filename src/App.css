@@ -248,8 +248,8 @@ p {
 .gallery-container img {
   align-items: center;
   justify-content: center;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   margin: 1vw;
   /* border: 1px solid black; */
   border-radius: 5px;
