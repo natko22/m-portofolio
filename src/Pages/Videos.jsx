@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import myVideo from "../assets/videos/IMG_8114 2.MOV";
-import video2 from "../assets/videos/joined_video_7682d226ff544778bac830cf87f2647c.MP4";
+import myVideo from "../assets/client-videos/01.MOV";
+import video2 from "../assets/client-videos/02.MP4";
 import previewImage1 from "../assets/preview-images/01.webp";
 import previewImage2 from "../assets/preview-images/02.jpeg";
 
