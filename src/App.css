@@ -265,6 +265,7 @@ p {
 #published img {
   width: 500px;
   height: 500px;
+  object-fit: contain;
 }
 
 /* Change the opacity of the LightGallery overlay */
@@ -463,8 +464,8 @@ body .lg-backdrop {
   }
 
   .gallery-container img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
 
   .gallery-container img:hover {
@@ -472,8 +473,8 @@ body .lg-backdrop {
   }
 
   #published img {
-    width: 400px;
-    height: 400px;
+    width: 100px;
+    height: 100px;
   }
 
   .videos {
