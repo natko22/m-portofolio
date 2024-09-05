@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
-import Videos from "./Pages/Videos";
+import Clients from "./Pages/Clients";
 import PublishedPhotos from "./Pages/Published";
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/published" element={<PublishedPhotos />} />
-        <Route path="/videos" element={<Videos />} />
+        <Route path="/clients" element={<Clients />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />

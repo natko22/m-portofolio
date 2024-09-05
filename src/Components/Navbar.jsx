@@ -79,12 +79,12 @@ function Navbar() {
           </Link>
           <Link
             className="links"
-            to="/videos"
+            to="/clients"
             onClick={() => {
               closeMenu();
             }}
           >
-            AUDIOVISUAL
+            CLIENTS{" "}
           </Link>
           <Link
             className="links"
