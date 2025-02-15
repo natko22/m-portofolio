@@ -1,0 +1,55 @@
+/* NAVBAR */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.nav-icons {
+  color: black;
+  font-size: 30px;
+  padding: 5px;
+}
+.nav-icons :hover {
+  color: #ada9a9;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 100px;
+}
+.links {
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 30px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond";
+  font-size: 25px;
+  /* letter-spacing: 5px; */
+}
+
+.links-container a:hover {
+  color: #ada9a9;
+  font-style: italic;
+}
+
+.name-title {
+  font-family: "Roughmarker";
+  font-size: 25px;
+}
+
+.close-icon {
+  display: none;
+}

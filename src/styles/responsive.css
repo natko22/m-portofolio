@@ -1,0 +1,207 @@
+@media screen and (max-width: 1024px) and (min-width: 200px) {
+  body {
+    overflow-x: hidden;
+
+    /* background-image: url("/src/assets/background-image.jpg") no-repeat/center; */
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 9vw;
+    letter-spacing: 4vw;
+    margin-bottom: -2vh;
+    margin-right: -3vw;
+  }
+
+  /* h1 {
+    text-align: center;
+    font-size: 9vw;
+    letter-spacing: 4vw;
+    margin-bottom: 5vh;
+    margin-right: -3vw;
+    background-attachment: fixed;
+  } */
+
+  h2 {
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding: 20px 0;
+    margin: 30px;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0;
+    background-color: #fbfbfb6c;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.624);
+  }
+
+  .navbar-container.menu-toggle {
+    z-index: 1000;
+  }
+
+  .nav-icons {
+    font-size: 20px;
+  }
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 0px;
+    position: fixed;
+    right: 20px;
+    top: 16px;
+    z-index: 1001;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    background-color: #4e4747f0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    padding: 20px;
+    margin-top: 60px;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+
+  .links-container.show .menu-items {
+    transform: translateX(0);
+  }
+
+  .links {
+    text-decoration: none;
+    padding: 10px 0;
+    color: #dbd9d9;
+    font-weight: 900;
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .close-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 7px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .home-container {
+    text-align: center;
+    height: 85vh;
+    background-position: center center;
+  }
+
+  .name-title {
+    display: none;
+  }
+
+  .gallery-container {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+
+  .gallery-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gallery-container img:hover {
+    transform: none;
+  }
+
+  #published img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .videos {
+    padding: 5vw;
+    margin: 0;
+  }
+
+  .videos video {
+    width: 60vw;
+  }
+
+  .videos a {
+    font-size: 5vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .about-me-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2vh;
+  }
+
+  .about-me-box {
+    max-width: 90%;
+    max-height: 50%;
+    margin-top: 10px;
+    margin-bottom: 5vh;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    margin-right: 5vw;
+  }
+
+  .aboutme {
+    font-size: 8vw;
+    margin-left: -4vw;
+    margin-top: -2vh;
+    text-align: center;
+    justify-content: center;
+    font-family: "Cormorant Garamond";
+  }
+
+  .aboutme-h3-centered {
+    margin-left: 2vw;
+    font-family: "Cormorant Garamond";
+    font-size: 3vw;
+    height: 5vh;
+  }
+
+  .aboutme-h3 {
+    margin-left: 2vw;
+    display: flex;
+    justify-content: center;
+    margin-top: -5vh;
+    font-family: "Cormorant Garamond";
+    font-size: 3vw;
+  }
+
+  .aboutme-p {
+    margin-left: 2vw;
+    height: 2vh;
+    font-size: 3vw;
+    font-family: "Cormorant Garamond";
+  }
+}
