@@ -1,15 +1,10 @@
-// Gallery.js
 import React from "react";
-import Creative from "../Components/Creative";
-import Editorial from "../Components/Editorial";
-import Celebrity from "../Components/Celebrity";
+import GalleryTabs from "../Components/GalleryTabs";
 
 function Gallery() {
   return (
-    <div>
-      <Editorial />
-      <Celebrity />
-      <Creative />
+    <div className="gallery-page">
+      <GalleryTabs />
     </div>
   );
 }

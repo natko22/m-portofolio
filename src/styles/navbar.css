@@ -1,10 +1,9 @@
-/* NAVBAR */
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
+  z-index: 100;
 }
 
 .nav-icons {
@@ -47,7 +46,7 @@
 
 .name-title {
   font-family: "Roughmarker";
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .close-icon {

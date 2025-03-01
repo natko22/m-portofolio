@@ -19,7 +19,7 @@ function Creative() {
 
   return (
     <div className="gallery-container">
-      <h2>CREATIVE MAKE UP</h2>
+      {/* <h2>CREATIVE MAKE UP</h2> */}
       <LightGallery speed={500} download={false}>
         {images.map((image) => (
           <a key={image.id} href={image.original} className="gallery-item">
