@@ -1,4 +1,3 @@
-// Gallery.js
 import React from "react";
 
 import PublishedPhotos from "../Components/Published";

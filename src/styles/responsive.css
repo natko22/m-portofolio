@@ -92,9 +92,7 @@
     padding: 8px 0;
     color: #dbd9d9;
     font-weight: 900;
-    font-size: calc(
-      14px + 0.8vw
-    ); /* Fluid font size that scales with viewport width */
+    font-size: calc(14px + 0.8vw);
     transition: all 0.3s ease;
     white-space: nowrap;
   }
@@ -123,20 +121,23 @@
   .gallery-container {
     text-align: center;
     margin-bottom: 5vh;
+    max-width: 90%;
   }
 
   .gallery-container img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
   }
 
   .gallery-container img:hover {
-    transform: none;
+    transform: none !important;
   }
 
   #published img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
   }
 
   .videos {

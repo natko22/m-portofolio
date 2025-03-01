@@ -1,8 +1,8 @@
 @import "./styles/base.css";
-@import "./styles/responsive.css";
 @import "./styles/navbar.css";
 @import "./styles/home.css";
 @import "./styles/about.css";
+@import "./styles/responsive.css";
 @import "./styles/gallery-tabs.css";
 @import "./styles/gallery.css";
 @import "./styles/videos.css";
