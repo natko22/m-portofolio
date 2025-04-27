@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Editorial from "./Editorial";
 import Celebrity from "./Celebrity";
 import Creative from "./Creative";
+import Published from "./Published";
 import "../styles/gallery-tabs.css";
 
 function GalleryTabs() {
@@ -13,6 +14,7 @@ function GalleryTabs() {
     { id: "editorial", label: "Editorial" },
     { id: "celebrity", label: "Celebrity" },
     { id: "creative", label: "Creative" },
+    { id: "published", label: "Published" },
   ];
 
   return (
@@ -39,6 +41,9 @@ function GalleryTabs() {
       </div>
       <div style={{ display: activeTab === "creative" ? "block" : "none" }}>
         <Creative />
+      </div>
+      <div style={{ display: activeTab === "published" ? "block" : "none" }}>
+        <Published />
       </div>
     </>
   );

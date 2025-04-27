@@ -7,9 +7,11 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Clients from "./Pages/Clients";
 import PublishedPhotos from "./Pages/Published";
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

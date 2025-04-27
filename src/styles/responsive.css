@@ -208,4 +208,162 @@
     font-size: 3vw;
     font-family: "Cormorant Garamond";
   }
+
+  /* Content sections */
+  .content-section {
+    padding: 40px 15px;
+    max-width: 100%;
+  }
+
+  /* Section backgrounds */
+  .featured-works,
+  .services,
+  .testimonial,
+  .social-proof {
+    padding: 50px 0;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.8rem;
+    margin-top: -4rem;
+  }
+
+  /* Hero section */
+  .hero-section {
+    padding: 100px 0 60px;
+  }
+
+  .hero-image-container {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+
+  .hero-title {
+    font-size: 7vw;
+    margin-left: 0;
+    padding: 0 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 5px;
+  }
+
+  .hero-tagline {
+    font-size: 2vw;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .cta-button .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  /* Featured works grid */
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .featured-item img {
+    height: 250px;
+  }
+
+  .work-info {
+    padding: 15px;
+  }
+
+  .work-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .work-info p {
+    font-size: 0.85rem;
+  }
+
+  /* View gallery button */
+  .view-more {
+    margin-top: 3rem;
+  }
+
+  .view-more a {
+    font-size: 0.85rem;
+    padding: 10px 25px;
+  }
+
+  /* Services grid */
+  .services-grid {
+    gap: 15px;
+  }
+
+  .service-item {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Testimonial section */
+  .testimonial-container {
+    max-width: 95%;
+    height: 250px;
+    padding: 25px;
+  }
+
+  .testimonial-content {
+    padding: 35px 0px;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  /* Brand logos */
+  .brand-logos {
+    gap: 30px;
+  }
+
+  .brand-logo {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 6vw;
+    letter-spacing: 5px;
+  }
+
+  .hero-tagline {
+    font-size: 3vw;
+    margin-bottom: 20px;
+  }
+
+  .hero-section {
+    padding: 100px 0 60px;
+  }
+  .cta-button .btn {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+  }
+
+  .testimonial-container {
+    width: 95%;
+    min-height: 260px;
+    padding: 15px 10px;
+  }
+
+  .testimonial-content {
+    padding: 15px;
+    width: 95%;
+  }
+  .testimonial-client {
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+
+  .testimonial-text {
+    font-size: 0.85rem;
+    padding: 0 15px;
+  }
 }

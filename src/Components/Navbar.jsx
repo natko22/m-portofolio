@@ -68,7 +68,7 @@ function Navbar() {
           >
             GALLERY
           </Link>
-          <Link
+          {/* <Link
             className="links"
             to="/published"
             onClick={() => {
@@ -76,7 +76,7 @@ function Navbar() {
             }}
           >
             PUBLISHED PHOTOS{" "}
-          </Link>
+          </Link> */}
           <Link
             className="links"
             to="/clients"
