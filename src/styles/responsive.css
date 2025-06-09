@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
+    padding: 40px 10px;
     position: sticky;
     top: 0;
     background-color: #fbfbfb6c;
@@ -46,9 +46,6 @@
     z-index: 1000;
   }
 
-  .nav-icons {
-    font-size: 20px;
-  }
   .bar {
     width: 25px;
     height: 3px;
@@ -63,24 +60,24 @@
     padding: 0px;
     position: fixed;
     right: 20px;
-    top: 16px;
+    top: 22px;
     z-index: 1001;
   }
 
   .menu-items {
     display: flex;
     flex-direction: column;
-    background-color: #4e4747f0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
     position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
-    width: 70%;
-    max-width: 300px;
-    padding: 20px;
-    margin-top: 60px;
+    width: 280px;
+    padding: 80px 40px 40px;
     transform: translateX(100%);
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
   }
 
   .links-container.show .menu-items {
@@ -89,12 +86,35 @@
 
   .links {
     text-decoration: none;
-    padding: 8px 0;
-    color: #dbd9d9;
-    font-weight: 900;
-    font-size: calc(14px + 0.8vw);
+    padding: 25px 0;
+    color: #2c2c2c;
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: "Cormorant Garamond", serif;
+    letter-spacing: 2px;
     transition: all 0.3s ease;
-    white-space: nowrap;
+    border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+    position: relative;
+  }
+
+  .links:hover {
+    color: #666;
+    padding-left: 10px;
+  }
+
+  .links::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: #2c2c2c;
+    transition: width 0.3s ease;
+  }
+
+  .links:hover::before {
+    width: 250px;
   }
 
   .close-icon {
@@ -112,10 +132,6 @@
     text-align: center;
     height: 85vh;
     background-position: center center;
-  }
-
-  .name-title {
-    display: none;
   }
 
   .gallery-container {
