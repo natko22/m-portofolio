@@ -1,4 +1,3 @@
-import React from "react";
 import GalleryTabs from "../Components/GalleryTabs";
 
 function Gallery() {

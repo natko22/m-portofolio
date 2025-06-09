@@ -79,17 +79,38 @@
   }
 }
 
+/* NEW: Responsive adjustments for medium screens (800px and around) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .gallery-tabs {
+    margin-top: 80px; /* Reduced from 150px */
+    gap: 12px;
+  }
+
+  .gallery-tabs::before {
+    width: 450px;
+    top: -20px;
+  }
+
+  .tab-button {
+    padding: 9px 20px;
+    font-size: 15px;
+    min-width: 140px;
+  }
+}
+
 /* Responsive adjustments for tablets and medium screens */
 @media (max-width: 768px) {
   .gallery-tabs {
     gap: 10px;
     max-width: 100%;
     padding: 0 10px;
+    margin-top: 60px; /* Further reduced for tablets */
   }
 
   .gallery-tabs::before {
     width: 80%;
     max-width: 400px;
+    top: -18px;
   }
 
   .tab-button {
@@ -99,20 +120,33 @@
   }
 }
 
+/* NEW: Specific adjustments for landscape tablets and small laptops */
+@media (max-width: 900px) and (min-width: 769px) and (orientation: landscape) {
+  .gallery-tabs {
+    margin-top: 70px;
+    gap: 10px;
+  }
+
+  .tab-button {
+    padding: 8px 18px;
+    font-size: 14px;
+    min-width: 130px;
+  }
+}
+
 /* Responsive adjustments for mobile phones */
 @media (max-width: 480px) {
   .gallery-tabs {
     flex-direction: row;
     justify-content: center;
     gap: 8px;
-    margin: 15px auto;
+    margin: 40px auto 25px auto; /* Adjusted top margin */
   }
 
   .gallery-tabs::before {
     width: 90%;
-    max-width: 500px;
+    max-width: 300px;
     top: -15px;
-    margin: 5px;
   }
 
   .tab-button {
@@ -128,17 +162,44 @@
 @media (max-width: 360px) {
   .gallery-tabs {
     gap: 5px;
+    margin: 35px auto 20px auto;
   }
 
   .gallery-tabs::before {
     width: 95%;
     max-width: 250px;
-    top: -10px;
+    top: -12px;
   }
 
   .tab-button {
     padding: 5px 8px;
     font-size: 11px;
     min-width: 70px;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 750px) {
+  .gallery-tabs {
+    margin-top: 70px;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .gallery-tabs::before {
+    width: 400px;
+    top: -20px;
+  }
+
+  .tab-button {
+    padding: 8px 18px;
+    font-size: 14px;
+    min-width: 125px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .gallery-tabs {
+    margin-top: 120px;
   }
 }
