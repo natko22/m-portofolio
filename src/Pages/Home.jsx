@@ -123,7 +123,6 @@ function Home() {
             >
               Manto Kamari
             </motion.h1>
-
             <motion.p
               className="hero-tagline"
               initial={{ opacity: 0 }}
@@ -132,16 +131,18 @@ function Home() {
             >
               Transforming faces into art with precision and passion
             </motion.p>
-
             <motion.div
               className="cta-button"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Link to="/contact" className="btn">
+              <a
+                href="mailto:mantwkamari@gmail.com?subject=Booking Inquiry&body=Hi Manto, I'm interested in booking a makeup session. Please let me know your availability and rates."
+                className="btn"
+              >
                 Book Your Session
-              </Link>
+              </a>
             </motion.div>
           </div>
         </motion.div>

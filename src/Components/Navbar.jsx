@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -18,24 +17,7 @@ function Navbar() {
 
   return (
     <div className="navbar-container">
-      <div className="icons-container">
-        <a
-          href="https://www.instagram.com/mantokamarimakeupartist/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon"
-        >
-          <FontAwesomeIcon className="nav-icons" icon={faInstagram} />
-        </a>
-        <a
-          href="mailto:mantwkamari@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon"
-        >
-          <FontAwesomeIcon className="nav-icons" icon={faEnvelope} />
-        </a>
-      </div>
+      {/* REMOVED: Social icons container - moved to contact section */}
 
       <div className={`links-container ${showMenu ? "show" : ""}`}>
         <div className="menu-toggle" onClick={toggleMenu}>
@@ -68,15 +50,6 @@ function Navbar() {
           >
             GALLERY
           </Link>
-          {/* <Link
-            className="links"
-            to="/published"
-            onClick={() => {
-              closeMenu();
-            }}
-          >
-            PUBLISHED PHOTOS{" "}
-          </Link> */}
           <Link
             className="links"
             to="/clients"
@@ -84,7 +57,7 @@ function Navbar() {
               closeMenu();
             }}
           >
-            CLIENTS{" "}
+            CLIENTS
           </Link>
           <Link
             className="links"
@@ -97,7 +70,6 @@ function Navbar() {
           </Link>
         </div>
       </div>
-      <div className="name-title">Manto Kamari</div>
     </div>
   );
 }
