@@ -38,7 +38,7 @@ function About() {
       setCurrentQuote((prev) => (prev + 1) % inspirationalQuotes.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [inspirationalQuotes.length]);
 
   return (
     <div className="about-page-container">
