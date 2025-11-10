@@ -1,0 +1,583 @@
+/* ========================================
+   ABOUT PAGE 
+   ======================================== */
+
+.about-page-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 120px 30px 100px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 160px);
+}
+
+/* ========================================
+   HERO SECTION - SPLIT LAYOUT
+   ======================================== */
+.about-hero-centered {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 100px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.profile-frame-centered {
+  width: 450px;
+  height: 540px;
+  margin-bottom: 0;
+  box-shadow: 0 20px 60px rgba(44, 44, 44, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-frame-centered:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(44, 44, 44, 0.2);
+}
+
+.profile-photo-centered {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.about-intro-centered {
+  max-width: 550px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.aboutme-name-centered {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.name-wrapper {
+  display: block;
+}
+
+.aboutme-tagline-centered {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.aboutme-location {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 25px;
+  font-style: normal;
+  text-align: left;
+}
+
+.aboutme-availability {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #2c2c2c;
+  border-radius: 25px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+  align-self: flex-start;
+}
+
+.globe-icon {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.aboutme-availability:hover .globe-icon {
+  transform: rotate(180deg);
+}
+
+.integrated-quote {
+  font-size: 1.15rem;
+  font-style: normal;
+  color: #555;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* ========================================
+   ABOUT MY WORK 
+   ======================================== */
+.about-story {
+  padding: 80px 0;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.story-content {
+  text-align: center;
+}
+
+.story-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #2c2c2c;
+}
+
+.story-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.story-text p {
+  margin-bottom: 25px;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   WHAT I DO SECTION 
+   ======================================== */
+.about-section {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Decorative line above */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 1px;
+  background-color: #000;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #2c2c2c;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.specialties-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.specialty {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 40px 30px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(44, 44, 44, 0.08);
+  box-shadow: 0 4px 15px rgba(44, 44, 44, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.specialty::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(135deg, #2c2c2c 0%, #666 100%);
+  border-radius: 0 0 2px 2px;
+  transition: width 0.3s ease;
+}
+
+.specialty:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(44, 44, 44, 0.15);
+  border-color: rgba(44, 44, 44, 0.15);
+  background-color: #fafafa;
+}
+
+.specialty:hover::before {
+  width: 90px;
+}
+
+.specialty h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.specialty p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  color: #666;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.specialty:hover h3 {
+  color: #000;
+}
+
+.specialty:hover p {
+  color: #333;
+}
+
+/* ========================================
+   CONTACT SECTION 
+   ======================================== */
+.cta-section {
+  padding: 80px 0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.section-content {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #666;
+}
+
+.contact-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(44, 44, 44, 0.15);
+  min-width: 160px;
+  justify-content: center;
+}
+
+.contact-btn.primary {
+  background: linear-gradient(135deg, #2c2c2c 0%, #444 100%);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.contact-btn.primary:hover {
+  background: linear-gradient(135deg, #444 0%, #2c2c2c 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(44, 44, 44, 0.3);
+}
+
+.contact-btn.secondary {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  color: #2c2c2c;
+  border: 2px solid #2c2c2c;
+}
+
+.contact-btn.secondary:hover {
+  background: linear-gradient(135deg, #2c2c2c 0%, #444 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(44, 44, 44, 0.25);
+}
+
+.contact-btn svg {
+  font-size: 1.1em;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media screen and (max-width: 968px) {
+  .about-hero-centered {
+    gap: 50px;
+  }
+
+  .profile-frame-centered {
+    width: 320px;
+    height: 400px;
+  }
+
+  .about-intro-centered {
+    max-width: 450px;
+  }
+
+  .aboutme-name-centered {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-page-container {
+    max-width: 100%;
+    padding: 60px 20px 80px;
+  }
+
+  .about-hero-centered {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    margin-bottom: 70px;
+  }
+
+  .profile-frame-centered {
+    width: 320px;
+    height: 400px;
+  }
+
+  .about-intro-centered {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .aboutme-name-centered {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .aboutme-tagline-centered {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .aboutme-location {
+    text-align: center;
+  }
+
+  .aboutme-availability {
+    align-self: center;
+  }
+
+  .integrated-quote {
+    text-align: center;
+  }
+
+  .contact-options {
+    justify-content: center;
+  }
+
+  .about-story {
+    padding: 60px 0;
+  }
+
+  .about-story::before,
+  .about-section::before {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .story-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .story-text {
+    font-size: 1.1rem;
+  }
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .specialties-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .specialty {
+    min-width: 100%;
+    max-width: 400px;
+    padding: 30px 25px;
+  }
+
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .contact-options {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .contact-btn {
+    min-width: 140px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+@media screen and (max-width: 480px) {
+  .about-page-container {
+    padding: 40px 15px 60px;
+  }
+
+  .about-hero-centered {
+    padding: 30px 0;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .profile-frame-centered {
+    width: 280px;
+    height: 350px;
+  }
+
+  .aboutme-name-centered {
+    font-size: 2.4rem;
+  }
+
+  .aboutme-tagline-centered {
+    font-size: 1.2rem;
+  }
+
+  .aboutme-availability {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .integrated-quote {
+    font-size: 1.05rem;
+  }
+
+  .about-story {
+    padding: 40px 0;
+  }
+
+  .about-story::before,
+  .about-section::before {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .story-title {
+    font-size: 1.8rem;
+  }
+
+  .story-text {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .specialty {
+    padding: 25px 20px;
+  }
+
+  .specialty h3 {
+    font-size: 1.3rem;
+  }
+
+  .specialty p {
+    font-size: 1rem;
+  }
+
+  .cta-section {
+    padding: 40px 0;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    min-width: 200px;
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}

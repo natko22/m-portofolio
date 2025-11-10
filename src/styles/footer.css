@@ -1,0 +1,125 @@
+.footer {
+  background: linear-gradient(135deg, #2c2c2c 0%, #333 100%);
+  color: white;
+  padding: 40px 20px 30px;
+  margin-top: 80px;
+  position: relative; /* NORMAL footer - not sticky */
+  border-top: 1px solid #444;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Navigation Links */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.footer-link {
+  font-family: "Cormorant Garamond", serif;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+/* Main Footer Section */
+.footer-main {
+  margin: 25px 0;
+}
+
+.footer-name {
+  font-family: "Cormorant Garamond", serif;
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-name:hover {
+  color: #ddd;
+}
+
+.footer-tagline {
+  font-family: "Cormorant Garamond", serif;
+  color: #bbb;
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Bottom Copyright */
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.copyright {
+  font-family: "Cormorant Garamond", serif;
+  color: #999;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 15px 25px;
+    margin-top: 60px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .footer-name {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 25px 10px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-nav {
+    gap: 12px;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+  }
+
+  .footer-name {
+    font-size: 1.3rem;
+  }
+}

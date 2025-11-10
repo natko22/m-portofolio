@@ -1,0 +1,77 @@
+/* FONTS */
+@font-face {
+  font-family: "Roughmarker";
+  font-display: auto;
+  src: local("Roughmarker"), url("../Fonts/Roughmarker.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: auto;
+  src: local("Cormorant Garamond"),
+    url("../Fonts/CormorantGaramond-Bold.ttf") format("truetype");
+}
+
+body {
+  /* background-attachment: fixed;  */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  /* background-image: url("/src/assets/background-image.jpg"); */
+  background-color: rgb(255, 255, 255);
+}
+
+/* h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "Roughmarker";
+  font-size: 12vw;
+  letter-spacing: 3vw;
+  padding-bottom: 6vh;
+  margin-bottom: 5vh;
+  color: rgba(255, 255, 255, 0.579);
+} */
+
+h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Roughmarker";
+  font-size: 12vw;
+  letter-spacing: 3vw;
+  padding-bottom: 6vh;
+  margin-bottom: 5vh;
+  color: rgba(255, 255, 255, 0.579);
+  /* color: transparent;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.579),
+    rgba(255, 255, 255, 0.579)
+  );
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  animation: backcolor 12s linear 1 forwards; /* Set animation-iteration-count to 1 and fill-mode to forwards */
+}
+/* @keyframes backcolor {
+  50% {
+    background-position: 100vw 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+} */
+p {
+  font-family: "Cormorant Garamond";
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Cormorant Garamond";
+  font-size: 50px;
+  letter-spacing: 10px;
+  padding: 30px;
+  border-top: 1px solid #000000;
+  margin-left: 90px;
+  margin-right: 90px;
+}

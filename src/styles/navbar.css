@@ -1,0 +1,40 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 100px;
+}
+.links {
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 30px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond";
+  font-size: 25px;
+  /* letter-spacing: 5px; */
+}
+
+.links-container a:hover {
+  color: #ada9a9;
+}
+
+.close-icon {
+  display: none;
+}
