@@ -69,13 +69,14 @@ export const useGalleryImages = (folder, categoryName) => {
               description: "BERLIN RUSH by Stela Alusi",
               type: "local",
             },
+
             {
-              title: "Backstage Video",
+              title: "Sweet Ephemeral",
               description: "",
               type: "local",
             },
             {
-              title: "Sweet Ephemeral",
+              title: "Backstage Video",
               description: "",
               type: "local",
             },
