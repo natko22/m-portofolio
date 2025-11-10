@@ -36,14 +36,14 @@ function Home() {
   }, [sliderImages.length]);
 
   // Featured works data with imported images
-  const featuredWorks = [
-    // {
-    //   id: 1,
-    //   image: editorialImage,
-    //   title: "Editorial Beauty",
-    //   category: "Fashion",
-    // },
-  ];
+  // const featuredWorks = [
+  //   // {
+  //   //   id: 1,
+  //   //   image: editorialImage,
+  //   //   title: "Editorial Beauty",
+  //   //   category: "Fashion",
+  //   // },
+  // ];
 
   // Testimonials data
   // const testimonials = [
