@@ -1,10 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import Masonry from "react-masonry-css";
 import lightGallery from "lightgallery";
 
-// Only import the base CSS - no zoom
 import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-video.css"; // Changed this line
+import "lightgallery/css/lg-video.css";
 import lgVideo from "lightgallery/plugins/video";
 
 function MasonryGallery({ images, category = "Gallery" }) {
@@ -24,7 +24,7 @@ function MasonryGallery({ images, category = "Gallery" }) {
         download: false,
         plugins: [lgVideo],
 
-        // NAVIGATION - Enable all methods
+        // NAVIGATION
         controls: true,
         escKey: true,
 
@@ -33,15 +33,18 @@ function MasonryGallery({ images, category = "Gallery" }) {
         closable: true,
         enableSwipe: true,
         enableDrag: true,
+        mobileSettings: {
+          controls: true,
+          showCloseIcon: true,
+          download: false,
+        },
 
         // REMOVE ZOOM
         zoom: false,
-
-        // TOOLBAR - Hide zoom button
         showZoomInOutIcons: false,
         actualSize: false,
 
-        // COUNTER - Show "1 / 10"
+        // COUNTER
         counter: true,
 
         // VIDEO SETTINGS
@@ -78,9 +81,9 @@ function MasonryGallery({ images, category = "Gallery" }) {
         {images.map((image) => (
           <a
             key={image.id}
-            href={image.isVideo ? undefined : image.original}
+            href={image.isVideo ? "#" : image.original}
             className="masonry-item"
-            data-src={image.isVideo ? undefined : image.original}
+            data-src={image.original}
             {...(image.isVideo && {
               "data-video": JSON.stringify({
                 source: [{ src: image.original, type: "video/mp4" }],
@@ -91,6 +94,12 @@ function MasonryGallery({ images, category = "Gallery" }) {
                 },
               }),
             })}
+            onClick={(e) => {
+              // Prevent default link behavior on mobile
+              if (image.isVideo) {
+                e.preventDefault();
+              }
+            }}
           >
             <div className="masonry-image-container">
               {!loadedImages.has(image.id) && (
