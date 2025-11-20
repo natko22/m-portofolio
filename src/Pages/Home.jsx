@@ -97,7 +97,10 @@ function Home() {
       name: "Faces",
       url: "https://facesmag.com/fashion-editorials-en/berlin-rush-by-stela-alusi/",
     },
-    { name: "Elle", url: null },
+    {
+      name: "OFF TOWN",
+      url: "https://www.magcloud.com/browse/issue/3197263?__r=2937742",
+    },
     { name: "Harper's", url: null },
     { name: "Glamour", url: null },
   ];
