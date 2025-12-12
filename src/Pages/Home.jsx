@@ -94,14 +94,17 @@ function Home() {
   // Brands that have featured Manto's work
   const brands = [
     {
-      name: "Faces",
+      name: "FACES",
       url: "https://facesmag.com/fashion-editorials-en/berlin-rush-by-stela-alusi/",
     },
     {
       name: "OFF TOWN",
       url: "https://www.magcloud.com/browse/issue/3197263?__r=2937742",
     },
-    { name: "Harper's", url: null },
+    {
+      name: "KALTBLUT",
+      url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
+    },
     { name: "Glamour", url: null },
   ];
 
