@@ -1,14 +1,20 @@
 /* FONTS */
-@font-face {
+/* @font-face {
   font-family: "Roughmarker";
   font-display: auto;
   src: local("Roughmarker"), url("../Fonts/Roughmarker.ttf") format("truetype");
-}
+} */
 @font-face {
   font-family: "Cormorant Garamond";
   font-display: auto;
   src: local("Cormorant Garamond"),
     url("../Fonts/CormorantGaramond-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HerrVonMuellerhoff-Regular.ttf";
+  font-display: auto;
+  src: local("HerrVonMuellerhoff-Regular.ttf"),
+    url("../Fonts/HerrVonMuellerhoff-Regular.ttf") format("truetype");
 }
 
 body {
@@ -37,7 +43,7 @@ h1 {
   display: flex;
   text-align: center;
   justify-content: center;
-  font-family: "Roughmarker";
+  font-family: "HerrVonMuellerhoff-Regular.ttf";
   font-size: 12vw;
   letter-spacing: 3vw;
   padding-bottom: 6vh;

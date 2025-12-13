@@ -6,8 +6,8 @@ import bgImage from "../assets/home-page-photo.jpeg";
 
 // Import your cover images here
 import cover1 from "../assets/covers/10.webp";
+import cover3 from "../assets/covers/11.webp";
 import cover2 from "../assets/covers/12.webp";
-// import cover3 from "../assets/covers/cover3.jpg";
 
 function Home() {
   // Refs for scroll animations
@@ -18,7 +18,7 @@ function Home() {
   const sliderImages = [
     { id: 1, image: cover1, alt: "Cover 1" },
     { id: 2, image: cover2, alt: "Cover 2" },
-    // { id: 3, image: cover3, alt: "Cover 3" },
+    { id: 3, image: cover3, alt: "Cover 3" },
   ];
 
   // State for slider
@@ -105,7 +105,7 @@ function Home() {
       name: "KALTBLUT",
       url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
     },
-    { name: "Glamour", url: null },
+    // { name: "Glamour", url: null },
   ];
 
   // Service animation variants
