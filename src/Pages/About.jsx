@@ -78,6 +78,9 @@ function About() {
         </div>
       </motion.section>
 
+      {/* Divider */}
+      <hr className="section-divider" />
+
       {/* What I Do Section - No Card */}
       <motion.section
         className="about-section"
@@ -119,6 +122,9 @@ function About() {
           ))}
         </div>
       </motion.section>
+
+      {/* Divider */}
+      <hr className="section-divider" />
 
       {/* Contact Section - No Card */}
       <motion.section
