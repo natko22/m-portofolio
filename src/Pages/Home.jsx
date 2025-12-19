@@ -10,6 +10,19 @@ import cover3 from "../assets/covers/11.webp";
 import cover2 from "../assets/covers/12.webp";
 
 function Home() {
+  // Detect mobile for disabling animations
+  const [isMobile] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth <= 768;
+    }
+    return false;
+  });
+
+  // Quick transition for mobile (instant), normal for desktop
+  const getTransition = (desktopTransition) => {
+    return isMobile ? { duration: 0, delay: 0 } : desktopTransition;
+  };
+
   // Refs for scroll animations
   const servicesRef = useRef(null);
   const isServicesInView = useInView(servicesRef, { once: false, amount: 0.3 });
@@ -29,58 +42,11 @@ function Home() {
     if (sliderImages.length > 0) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-      }, 5000); // Change slide every 5 seconds
+      }, 5000);
 
       return () => clearInterval(interval);
     }
   }, [sliderImages.length]);
-
-  // Featured works data with imported images
-  // const featuredWorks = [
-  //   // {
-  //   //   id: 1,
-  //   //   image: editorialImage,
-  //   //   title: "Editorial Beauty",
-  //   //   category: "Fashion",
-  //   // },
-  // ];
-
-  // Testimonials data
-  // const testimonials = [
-  //   {
-  //     id: 1,
-  //     text: "Manto created a look that perfectly captured my vision. Absolutely stunning work!",
-  //     client: "Emma S., Bride",
-  //   },
-  //   {
-  //     id: 2,
-  //     text: "Working with Manto on our editorial shoot was incredible. Her creativity and precision are unmatched.",
-  //     client: "Vogue Greece",
-  //   },
-  //   {
-  //     id: 3,
-  //     text: "The most talented makeup artist I've worked with in 15 years of modeling.",
-  //     client: "Sophia K., Model",
-  //   },
-  // ];
-
-  // State for rotating testimonials
-  // const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  // Function to handle testimonial display
-  // const showTestimonial = (index) => {
-  //   setCurrentTestimonial(index);
-  // };
-
-  // Auto-rotate testimonials
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const nextIndex = (currentTestimonial + 1) % testimonials.length;
-  //     showTestimonial(nextIndex);
-  //   }, 5000);
-
-  //   return () => clearInterval(interval);
-  // }, [currentTestimonial, testimonials.length]);
 
   // Services offered
   const services = [
@@ -105,7 +71,6 @@ function Home() {
       name: "KALTBLUT",
       url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
     },
-    // { name: "Glamour", url: null },
   ];
 
   // Service animation variants
@@ -114,10 +79,9 @@ function Home() {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: {
-        delay: i * 0.1 + 0.2,
-        duration: 0.5,
-      },
+      transition: isMobile
+        ? { duration: 0, delay: 0 }
+        : { delay: i * 0.1 + 0.2, duration: 0.5 },
     }),
   };
 
@@ -125,22 +89,19 @@ function Home() {
   const slideVariants = {
     enter: {
       opacity: 0,
-      scale: 1.1,
+      scale: isMobile ? 1 : 1.1,
     },
     center: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 1.2,
-        ease: "easeOut",
-      },
+      transition: isMobile
+        ? { duration: 0.3 }
+        : { duration: 1.2, ease: "easeOut" },
     },
     exit: {
       opacity: 0,
-      scale: 0.95,
-      transition: {
-        duration: 0.8,
-      },
+      scale: isMobile ? 1 : 0.95,
+      transition: isMobile ? { duration: 0.2 } : { duration: 0.8 },
     },
   };
 
@@ -151,7 +112,7 @@ function Home() {
         className="hero-section-new"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
+        transition={getTransition({ duration: 1.2 })}
       >
         <div className="hero-content-wrapper">
           {/* Title Section */}
@@ -159,7 +120,11 @@ function Home() {
             className="hero-title-section"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            transition={getTransition({
+              duration: 1,
+              ease: "easeOut",
+              delay: 0.2,
+            })}
           >
             <h1 className="hero-main-title">Manto Kamari</h1>
             <p className="hero-subtitle">Makeup & Hair Stylist</p>
@@ -170,7 +135,11 @@ function Home() {
             className="hero-large-image-container"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+            transition={getTransition({
+              duration: 1.2,
+              ease: "easeOut",
+              delay: 0.4,
+            })}
           >
             <img
               src={bgImage}
@@ -182,7 +151,7 @@ function Home() {
                 className="hero-overlay-tagline"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
+                transition={getTransition({ duration: 1, delay: 0.8 })}
               >
                 Transforming faces into art with precision and passion
               </motion.p>
@@ -190,7 +159,7 @@ function Home() {
                 className="cta-button"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 }}
+                transition={getTransition({ duration: 0.8, delay: 1 })}
               >
                 <a
                   href="mailto:mantwkamari@gmail.com?subject=Booking Inquiry&body=Hi Manto, I'm interested in booking a makeup session. Please let me know your availability and rates."
@@ -210,7 +179,7 @@ function Home() {
           className="featured-slider-section"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={getTransition({ duration: 1, delay: 0.3 })}
         >
           <div className="content-section">
             <h2 className="section-title">Featured Work</h2>
@@ -245,7 +214,7 @@ function Home() {
         ref={servicesRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={getTransition({ duration: 1 })}
       >
         <div className="content-section">
           <h2 className="section-title">Services</h2>
@@ -271,7 +240,7 @@ function Home() {
         className="testimonial"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.4 }}
+        transition={getTransition({ duration: 1, delay: 0.4 })}
       >
         {/* <div className="content-section">
           <h2 className="section-title">Client Praise</h2>
@@ -307,7 +276,7 @@ function Home() {
         className="social-proof"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={getTransition({ duration: 1, delay: 0.5 })}
       >
         <div className="content-section">
           <h2 className="section-title">As Seen In</h2>
@@ -318,7 +287,10 @@ function Home() {
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                transition={getTransition({
+                  duration: 0.5,
+                  delay: 0.6 + index * 0.1,
+                })}
               >
                 {brand.url ? (
                   <a

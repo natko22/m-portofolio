@@ -393,3 +393,23 @@
     font-size: 1.1rem;
   }
 }
+/* Tablet fix (769px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-main-title {
+    font-size: 7rem;
+    letter-spacing: 5px;
+  }
+
+  .hero-subtitle {
+    margin-top: -25px;
+  }
+}
+
+/* Fix horizontal overflow from animations */
+.hero-section-new,
+.featured-slider-section,
+.services,
+.testimonial,
+.social-proof {
+  overflow: hidden;
+}
