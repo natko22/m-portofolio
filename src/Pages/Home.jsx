@@ -10,18 +10,13 @@ import cover3 from "../assets/covers/11.webp";
 import cover2 from "../assets/covers/12.webp";
 
 function Home() {
-  // Detect mobile for disabling animations
+  // Detect mobile for disabling
   const [isMobile] = useState(() => {
     if (typeof window !== "undefined") {
       return window.innerWidth <= 768;
     }
     return false;
   });
-
-  // Quick transition for mobile (instant), normal for desktop
-  const getTransition = (desktopTransition) => {
-    return isMobile ? { duration: 0, delay: 0 } : desktopTransition;
-  };
 
   // Refs for scroll animations
   const servicesRef = useRef(null);
@@ -73,7 +68,7 @@ function Home() {
     },
   ];
 
-  // Service animation variants
+  // Service animation variants - disabled on mobile
   const serviceItemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
@@ -89,19 +84,22 @@ function Home() {
   const slideVariants = {
     enter: {
       opacity: 0,
-      scale: isMobile ? 1 : 1.1,
+      scale: 1.1,
     },
     center: {
       opacity: 1,
       scale: 1,
-      transition: isMobile
-        ? { duration: 0.3 }
-        : { duration: 1.2, ease: "easeOut" },
+      transition: {
+        duration: 1.2,
+        ease: "easeOut",
+      },
     },
     exit: {
       opacity: 0,
-      scale: isMobile ? 1 : 0.95,
-      transition: isMobile ? { duration: 0.2 } : { duration: 0.8 },
+      scale: 0.95,
+      transition: {
+        duration: 0.8,
+      },
     },
   };
 
@@ -112,7 +110,7 @@ function Home() {
         className="hero-section-new"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={getTransition({ duration: 1.2 })}
+        transition={{ duration: 1.2 }}
       >
         <div className="hero-content-wrapper">
           {/* Title Section */}
@@ -120,11 +118,7 @@ function Home() {
             className="hero-title-section"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={getTransition({
-              duration: 1,
-              ease: "easeOut",
-              delay: 0.2,
-            })}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
             <h1 className="hero-main-title">Manto Kamari</h1>
             <p className="hero-subtitle">Makeup & Hair Stylist</p>
@@ -135,11 +129,7 @@ function Home() {
             className="hero-large-image-container"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={getTransition({
-              duration: 1.2,
-              ease: "easeOut",
-              delay: 0.4,
-            })}
+            transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
           >
             <img
               src={bgImage}
@@ -151,7 +141,7 @@ function Home() {
                 className="hero-overlay-tagline"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={getTransition({ duration: 1, delay: 0.8 })}
+                transition={{ duration: 1, delay: 0.8 }}
               >
                 Transforming faces into art with precision and passion
               </motion.p>
@@ -159,7 +149,7 @@ function Home() {
                 className="cta-button"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={getTransition({ duration: 0.8, delay: 1 })}
+                transition={{ duration: 0.8, delay: 1 }}
               >
                 <a
                   href="mailto:mantwkamari@gmail.com?subject=Booking Inquiry&body=Hi Manto, I'm interested in booking a makeup session. Please let me know your availability and rates."
@@ -172,14 +162,13 @@ function Home() {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Featured Work Slider */}
       {sliderImages.length > 0 && (
         <motion.section
           className="featured-slider-section"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={getTransition({ duration: 1, delay: 0.3 })}
+          transition={{ duration: 1, delay: 0.3 }}
         >
           <div className="content-section">
             <h2 className="section-title">Featured Work</h2>
@@ -207,14 +196,13 @@ function Home() {
           </div>
         </motion.section>
       )}
-
-      {/* Services */}
+      {/* Services - animations disabled on mobile */}
       <motion.section
         className="services"
         ref={servicesRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={getTransition({ duration: 1 })}
+        transition={{ duration: 1 }}
       >
         <div className="content-section">
           <h2 className="section-title">Services</h2>
@@ -225,8 +213,10 @@ function Home() {
                 className="service-item"
                 custom={index}
                 variants={serviceItemVariants}
-                initial="hidden"
-                animate={isServicesInView ? "visible" : "hidden"}
+                initial={isMobile ? "visible" : "hidden"}
+                animate={
+                  isMobile ? "visible" : isServicesInView ? "visible" : "hidden"
+                }
               >
                 {service}
               </motion.div>
@@ -234,15 +224,15 @@ function Home() {
           </div>
         </div>
       </motion.section>
-
       {/* Testimonial */}
       <motion.section
         className="testimonial"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={getTransition({ duration: 1, delay: 0.4 })}
+        transition={{ duration: 1, delay: 0.4 }}
+      ></motion.section>
       >
-        {/* <div className="content-section">
+      {/* <div className="content-section">
           <h2 className="section-title">Client Praise</h2>
           <div className="testimonial-container">
             {testimonials.map((testimonial, index) => (
@@ -269,14 +259,12 @@ function Home() {
             ))}
           </div>
         </div> */}
-      </motion.section>
-
-      {/* Social Proof */}
+      {/* Social Proof - brand animations disabled on mobile */}
       <motion.section
         className="social-proof"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={getTransition({ duration: 1, delay: 0.5 })}
+        transition={{ duration: 1, delay: 0.5 }}
       >
         <div className="content-section">
           <h2 className="section-title">As Seen In</h2>
@@ -285,12 +273,15 @@ function Home() {
               <motion.div
                 className="brand-logo"
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
+                initial={
+                  isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+                }
                 animate={{ opacity: 1, y: 0 }}
-                transition={getTransition({
-                  duration: 0.5,
-                  delay: 0.6 + index * 0.1,
-                })}
+                transition={
+                  isMobile
+                    ? { duration: 0 }
+                    : { duration: 0.5, delay: 0.6 + index * 0.1 }
+                }
               >
                 {brand.url ? (
                   <a
