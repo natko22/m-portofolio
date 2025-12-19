@@ -231,7 +231,7 @@ function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
       ></motion.section>
-      >
+
       {/* <div className="content-section">
           <h2 className="section-title">Client Praise</h2>
           <div className="testimonial-container">
