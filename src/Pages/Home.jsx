@@ -62,9 +62,13 @@ function Home() {
       name: "OFF TOWN",
       url: "https://www.magcloud.com/browse/issue/3197263?__r=2937742",
     },
+    // {
+    //   name: "KALTBLUT",
+    //   url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
+    // },
     {
       name: "KALTBLUT",
-      url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
+      url: "https://www.kaltblut-magazine.com/thomas-hanisch-fall-winter-2026-exos/?fbclid=PAZnRzaAP0WxlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacij4Xrhg3qE-VXje_0hrFiA7Ju-zQDsoPRe3XGwRHaZcHOZdDqc22Qoebz6g_aem_ecBAuRjYpAOFdtUYyAE-JQ",
     },
   ];
 
