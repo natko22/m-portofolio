@@ -70,6 +70,10 @@ function Home() {
       name: "KALTBLUT",
       url: "https://www.kaltblut-magazine.com/thomas-hanisch-fall-winter-2026-exos/?fbclid=PAZnRzaAP0WxlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacij4Xrhg3qE-VXje_0hrFiA7Ju-zQDsoPRe3XGwRHaZcHOZdDqc22Qoebz6g_aem_ecBAuRjYpAOFdtUYyAE-JQ",
     },
+    {
+      name: "Harper’s Bazaar Việt Nam",
+      url: "https://bazaarvietnam.vn/ve-dep-co-dien-kieu-quy-toc-xua/",
+    },
   ];
 
   // Service animation variants - disabled on mobile
