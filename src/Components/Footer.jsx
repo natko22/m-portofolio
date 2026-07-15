@@ -30,6 +30,14 @@ function Footer() {
           <span className="copyright">
             © {currentYear} • Available Worldwide
           </span>
+          <a
+            href="https://www.chaptersbyanastasia.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-credit"
+          >
+            Design & Development by Anastasia Tsapanidou Kornilaki
+          </a>
         </div>
       </div>
     </div>

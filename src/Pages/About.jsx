@@ -35,19 +35,18 @@ function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
+          <p className="aboutme-eyebrow">Freelance Makeup Artist</p>
           <h1 className="aboutme-name-centered">
             <span className="name-wrapper">Manto Kamari</span>
           </h1>
-          <p className="aboutme-tagline-centered">Freelance Makeup Artist</p>
 
           <p className="aboutme-location">
             Berlin & Greece • Available Worldwide
           </p>
 
           <div className="integrated-quote">
-            With over 5 years of experience creating looks that enhance natural
-            beauty and bring creative visions to life across editorial, bridal,
-            and celebrity artistry.
+            Beauty has no single standard. Every face tells a different story,
+            and my role is to bring out what makes each one unique.
           </div>
         </motion.div>
       </motion.section>
@@ -63,16 +62,28 @@ function About() {
           <h2 className="story-title">About My Work</h2>
           <div className="story-text">
             <p>
-              With over 5 years of professional experience, I specialize in
-              creating makeup looks that enhance natural beauty while bringing
-              creative visions to life. My work spans editorial shoots,
-              celebrity clients, bridal artistry, and published campaigns across
-              8 countries.
+              I'm Manto Kamari. I'm a Make-up Artist and Hair Stylist based in
+              Berlin. I have over 8 years of experience in beauty, bridal,
+              fashion, TV, commercial, and e-commerce makeup.
             </p>
             <p>
-              I believe makeup is more than technique—it's about understanding
-              each person's unique features and creating looks that make them
-              feel confident and beautiful.
+              I believe makeup is not about changing people. It's about helping
+              them feel confident and bringing out their natural beauty. Every
+              face is different, and that's what makes my job so special.
+            </p>
+            <p>
+              I've worked with people from many different countries, cultures,
+              and skin tones, and that has taught me that every client needs
+              something different. I choose the right techniques and products to
+              fit each person's features and skin, so the final look feels
+              beautiful, comfortable, and natural.
+            </p>
+            <p>
+              Whether I'm working with a bride, a model, or a brand, I always
+              focus on the little details. I want every person who sits in my
+              chair to feel relaxed, understood, and happy with the final
+              result. For me, makeup isn't just a job — it's a way to help
+              people feel like the best version of themselves.
             </p>
           </div>
         </div>
