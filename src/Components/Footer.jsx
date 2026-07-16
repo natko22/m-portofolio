@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 function Footer() {
   const currentYear = new Date().getFullYear();
 
+  // Matches the navbar's behavior: Link only scrolls on route change, so
+  // clicking this while already on "/" needs its own explicit scroll.
+  const handleHomeClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="footer">
       <div className="footer-content">
@@ -19,7 +25,7 @@ function Footer() {
 
         {/* Main Footer */}
         <div className="footer-main">
-          <Link to="/" className="footer-name">
+          <Link to="/" className="footer-name" onClick={handleHomeClick}>
             Manto Kamari
           </Link>
           <p className="footer-tagline">Makeup Artist • Berlin & Greece</p>

@@ -19,6 +19,13 @@ function Navbar() {
     }
   };
 
+  // ScrollToTop only fires on route change, so clicking a nav link while
+  // already on that page needs its own explicit scroll.
+  const handleNavClick = (e) => {
+    closeMenu(e);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // Handle clicks outside the menu
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -74,14 +81,14 @@ function Navbar() {
           )}
         </div>
         <div className={`menu-items ${showMenu ? "show" : ""}`} ref={menuRef}>
-          <Link className="links" to="/" onClick={closeMenu}>
+          <Link className="links" to="/" onClick={handleNavClick}>
             HOME
           </Link>
-          <Link className="links" to="/gallery" onClick={closeMenu}>
+          <Link className="links" to="/gallery" onClick={handleNavClick}>
             GALLERY
           </Link>
 
-          <Link className="links" to="/about" onClick={closeMenu}>
+          <Link className="links" to="/about" onClick={handleNavClick}>
             ABOUT ME
           </Link>
         </div>

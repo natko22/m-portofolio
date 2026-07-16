@@ -19,8 +19,8 @@ export const useGalleryImages = (folder, categoryName) => {
               require.context(
                 "../assets/covers",
                 false,
-                /\.(jpg|jpeg|png|webp)$/i
-              )
+                /\.(jpg|jpeg|png|webp)$/i,
+              ),
             );
             break;
           case "editorial":
@@ -28,13 +28,13 @@ export const useGalleryImages = (folder, categoryName) => {
               require.context(
                 "../assets/editorial",
                 false,
-                /\.(jpg|jpeg|png|webp)$/i
-              )
+                /\.(jpg|jpeg|png|webp)$/i,
+              ),
             );
             break;
           case "videos":
             imageFiles = importAll(
-              require.context("../assets/videos", false, /\.(mp4|webm)$/i)
+              require.context("../assets/videos", false, /\.(mp4|webm)$/i),
             );
             isVideo = true;
             break;
@@ -43,8 +43,8 @@ export const useGalleryImages = (folder, categoryName) => {
               require.context(
                 "../assets/photoshoots",
                 false,
-                /\.(jpg|jpeg|png|webp)$/i
-              )
+                /\.(jpg|jpeg|png|webp)$/i,
+              ),
             );
             break;
           default:
@@ -130,7 +130,7 @@ export const useGalleryImages = (folder, categoryName) => {
                 resolve({
                   id: `${categoryName}-${index}`,
                   original: src,
-                  alt: `${categoryName} Makeup ${index + 1}`,
+                  // alt: `${categoryName} Makeup ${index + 1}`,
                   isVideo: false,
                   width: img.naturalWidth,
                   height: img.naturalHeight,
