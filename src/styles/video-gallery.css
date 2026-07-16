@@ -84,9 +84,9 @@
 }
 
 .video-title {
+  font-family: "Cormorant Garamond", serif;
   padding: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.3rem;
   color: #333;
   margin: 0;
   text-align: center;
@@ -112,7 +112,7 @@
   position: relative;
   width: 100%;
   max-width: 1400px;
-  background: #fff;
+  background: #1a1a1a;
   border-radius: 12px;
   overflow: hidden;
   max-height: 90vh;
@@ -146,34 +146,40 @@
 
 .video-player-container {
   width: 100%;
+  max-height: 65vh;
+  aspect-ratio: 16 / 9;
   background: #000;
   position: relative;
+  flex: 0 0 auto;
 }
 
 .video-player {
   width: 100%;
-  min-height: 60vh;
+  height: 100%;
   display: block;
+  object-fit: contain;
+  border: none;
 }
 
 .video-description {
-  padding: 2.5rem;
-  background: #fff;
+  font-family: "Cormorant Garamond", serif;
+  padding: 2rem 2.5rem;
+  background: #1a1a1a;
   overflow-y: auto;
 }
 
 .video-description h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.75rem;
-  color: #333;
-  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #f5f5f5;
 }
 
 .video-description p {
   margin: 0;
-  color: #666;
+  color: #bbb;
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   white-space: pre-wrap;
 }
 
@@ -230,9 +236,8 @@
     right: 0.5rem;
   }
 
-  .video-player {
-    min-height: 50vh;
-    height: 100%;
+  .video-player-container {
+    max-height: 50vh;
   }
 
   .video-description {
@@ -292,9 +297,8 @@
     font-size: 20px;
   }
 
-  .video-player {
-    min-height: 40vh;
-    height: 100%;
+  .video-player-container {
+    max-height: 40vh;
   }
 
   .video-description {

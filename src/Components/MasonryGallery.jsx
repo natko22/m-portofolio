@@ -68,7 +68,7 @@ function MasonryGallery({ images, category = "Gallery" }) {
     default: 4,
     1200: 3,
     900: 2,
-    600: 1,
+    600: 2,
   };
 
   return (

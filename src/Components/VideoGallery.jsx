@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/video-gallery.css";
 
 function VideoGallery({ videos, category = "Videos" }) {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  // Grabs a frame from each grid preview (once it's seeked to 1s) so the
+  // modal's video has an instant poster instead of a black flash while it
+  // buffers. Pure client-side canvas capture, no build step or new deps.
+  const [posterFrames, setPosterFrames] = useState({});
+
+  const captureFrame = useCallback((videoEl, id) => {
+    if (!videoEl || !videoEl.videoWidth) return;
+    const canvas = document.createElement("canvas");
+    canvas.width = videoEl.videoWidth;
+    canvas.height = videoEl.videoHeight;
+    canvas.getContext("2d").drawImage(videoEl, 0, 0);
+    setPosterFrames((prev) => ({ ...prev, [id]: canvas.toDataURL("image/jpeg", 0.8) }));
+  }, []);
 
   return (
     <>
@@ -39,6 +52,7 @@ function VideoGallery({ videos, category = "Videos" }) {
                     onLoadedMetadata={(e) => {
                       e.target.currentTime = 1;
                     }}
+                    onSeeked={(e) => captureFrame(e.target, video.id)}
                   >
                     <source src={`${video.original}#t=0.1`} type="video/mp4" />
                   </video>
@@ -90,7 +104,13 @@ function VideoGallery({ videos, category = "Videos" }) {
                   />
                 ) : (
                   // Local video player
-                  <video className="video-player" controls autoPlay playsInline>
+                  <video
+                    className="video-player"
+                    controls
+                    autoPlay
+                    playsInline
+                    poster={posterFrames[selectedVideo.id]}
+                  >
                     <source src={selectedVideo.original} type="video/mp4" />
                   </video>
                 )}
