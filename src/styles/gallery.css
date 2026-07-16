@@ -7,11 +7,15 @@
 /* Gallery Wrapper */
 .gallery-wrapper {
   min-height: 100vh;
+  /* dvh accounts for mobile browsers' collapsing address bar, avoiding
+     a mismatch that leaves blank space below the footer once scrolled. */
+  min-height: 100dvh;
 }
 
 .gallery-content-wrapper {
   position: relative;
   min-height: 80vh;
+  min-height: 80dvh;
 }
 
 /* MASONRY GALLERY STYLES */

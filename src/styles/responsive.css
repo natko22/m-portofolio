@@ -70,6 +70,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
     z-index: 999; /* Below menu but above content */
@@ -96,6 +97,7 @@
     z-index: 1002;
 
     height: 100vh;
+    height: 100dvh;
     width: 280px;
     padding: 80px 40px 40px;
     transform: translateX(100%);
