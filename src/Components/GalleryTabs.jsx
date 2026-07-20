@@ -10,19 +10,21 @@ function GalleryTabs() {
 
   const { images: coversImages, isLoading: coversLoading } = useGalleryImages(
     "covers",
-    "Covers"
+    "Covers",
+    activeTab === "covers"
   );
 
   const { images: editorialImages, isLoading: editorialLoading } =
-    useGalleryImages("editorial", "Editorial");
+    useGalleryImages("editorial", "Editorial", activeTab === "editorial");
 
   const { images: videosImages, isLoading: videosLoading } = useGalleryImages(
     "videos",
-    "Videos"
+    "Videos",
+    activeTab === "videos"
   );
 
   const { images: photoshootsImages, isLoading: photoshootsLoading } =
-    useGalleryImages("photoshoots", "Photoshoots");
+    useGalleryImages("photoshoots", "Photoshoots", activeTab === "photoshoots");
 
   const categories = [
     {

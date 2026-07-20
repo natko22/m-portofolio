@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-export const useGalleryImages = (folder, categoryName) => {
+export const useGalleryImages = (folder, categoryName, enabled = true) => {
   const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(enabled);
+  const hasLoadedRef = useRef(false);
 
   useEffect(() => {
+    if (!enabled || hasLoadedRef.current) return;
+
     const loadImages = async () => {
       setIsLoading(true);
 
@@ -120,6 +123,7 @@ export const useGalleryImages = (folder, categoryName) => {
             }));
 
           setImages([...videoData, ...youtubeVideos]);
+          hasLoadedRef.current = true;
           setIsLoading(false);
         } else {
           // Load images and get dimensions
@@ -147,6 +151,7 @@ export const useGalleryImages = (folder, categoryName) => {
 
           const loadedImages = await Promise.all(imagePromises);
           setImages(loadedImages.filter((img) => img !== null));
+          hasLoadedRef.current = true;
           setIsLoading(false);
         }
       } catch (error) {
@@ -157,7 +162,7 @@ export const useGalleryImages = (folder, categoryName) => {
     };
 
     loadImages();
-  }, [folder, categoryName]);
+  }, [folder, categoryName, enabled]);
 
   return { images, isLoading };
 };
