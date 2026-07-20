@@ -19,16 +19,15 @@
   justify-content: center;
   gap: 30px;
   margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #444;
 }
 
 .footer-link {
   font-family: "Cormorant Garamond", serif;
   color: #ccc;
   text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
   transition: color 0.3s ease;
 }
 
@@ -42,27 +41,28 @@
 }
 
 .footer-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "HerrVonMuellerhoff-Regular.ttf";
   color: white;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 3.2rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: normal;
   display: block;
   margin-bottom: 8px;
   transition: color 0.3s ease;
 }
 
 .footer-name:hover {
-  color: #ddd;
+  color: #ccc;
 }
 
 .footer-tagline {
   font-family: "Cormorant Garamond", serif;
   color: #bbb;
-  font-size: 1rem;
+  text-transform: uppercase;
+  font-size: 0.95rem;
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 /* Bottom Copyright */
@@ -109,14 +109,16 @@
   }
 
   .footer-nav {
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 15px 40px;
     margin-bottom: 20px;
   }
 
   .footer-name {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+    font-size: 2.6rem;
+    letter-spacing: normal;
   }
 
   .footer-tagline {
@@ -143,6 +145,6 @@
   }
 
   .footer-name {
-    font-size: 1.3rem;
+    font-size: 2.2rem;
   }
 }

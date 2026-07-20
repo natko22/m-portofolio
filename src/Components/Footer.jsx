@@ -21,6 +21,19 @@ function Footer() {
           <Link to="/about" className="footer-link">
             About
           </Link>
+
+          <a href="mailto:mantwkamari@gmail.com" className="footer-link">
+            Contact
+          </a>
+
+          <a
+            href="https://www.instagram.com/mantokamarimakeupartist/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
+            Instagram
+          </a>
         </div>
 
         {/* Main Footer */}
@@ -28,13 +41,15 @@ function Footer() {
           <Link to="/" className="footer-name" onClick={handleHomeClick}>
             Manto Kamari
           </Link>
-          <p className="footer-tagline">Makeup Artist • Berlin & Greece</p>
+          <p className="footer-tagline">
+            Makeup & Hair Stylist · Berlin & Greece · Available Worldwide
+          </p>
         </div>
 
         {/* Bottom Info */}
         <div className="footer-bottom">
           <span className="copyright">
-            © {currentYear} • Available Worldwide
+            © {currentYear} Manto Kamari. All Rights Reserved.
           </span>
           <a
             href="https://www.chaptersbyanastasia.dev/"

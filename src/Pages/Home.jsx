@@ -170,6 +170,47 @@ function Home() {
           </motion.div>
         </div>
       </motion.section>
+      {/* Social Proof - brand animations disabled on mobile */}
+      <motion.section
+        className="social-proof"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <div className="content-section">
+          <h2 className="section-title">As Seen In</h2>
+          <div className="brand-logos">
+            {brands.map((brand, index) => (
+              <motion.div
+                className="brand-logo"
+                key={index}
+                initial={
+                  isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+                }
+                animate={{ opacity: 1, y: 0 }}
+                transition={
+                  isMobile
+                    ? { duration: 0 }
+                    : { duration: 0.5, delay: 0.6 + index * 0.1 }
+                }
+              >
+                {brand.url ? (
+                  <a
+                    href={brand.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="brand-link"
+                  >
+                    {brand.name}
+                  </a>
+                ) : (
+                  <span>{brand.name}</span>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
       {/* Featured Work Slider */}
       {sliderImages.length > 0 && (
         <motion.section
@@ -190,6 +231,13 @@ function Home() {
                   animate="center"
                   exit="exit"
                 >
+                  <div
+                    className="slider-image-bg"
+                    style={{
+                      backgroundImage: `url(${sliderImages[currentSlide].image})`,
+                    }}
+                    aria-hidden="true"
+                  />
                   <img
                     src={sliderImages[currentSlide].image}
                     alt={sliderImages[currentSlide].alt}
@@ -267,47 +315,6 @@ function Home() {
             ))}
           </div>
         </div> */}
-      {/* Social Proof - brand animations disabled on mobile */}
-      <motion.section
-        className="social-proof"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <div className="content-section">
-          <h2 className="section-title">As Seen In</h2>
-          <div className="brand-logos">
-            {brands.map((brand, index) => (
-              <motion.div
-                className="brand-logo"
-                key={index}
-                initial={
-                  isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
-                }
-                animate={{ opacity: 1, y: 0 }}
-                transition={
-                  isMobile
-                    ? { duration: 0 }
-                    : { duration: 0.5, delay: 0.6 + index * 0.1 }
-                }
-              >
-                {brand.url ? (
-                  <a
-                    href={brand.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="brand-link"
-                  >
-                    {brand.name}
-                  </a>
-                ) : (
-                  <span>{brand.name}</span>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
     </div>
   );
 }

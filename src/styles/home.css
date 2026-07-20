@@ -130,12 +130,29 @@
   position: relative;
   width: 100%;
   height: 600px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+/* Fills the frame regardless of the photo's own aspect ratio, so photos
+   that don't match the frame's shape (e.g. a 9:16 cover in a landscape
+   frame) don't leave flat empty bars - the space reads as an intentional
+   backdrop instead of blank padding. */
+.slider-image-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(35px) brightness(0.85);
+  transform: scale(1.15);
 }
 
 .slider-image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
