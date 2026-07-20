@@ -36,9 +36,15 @@ export const useGalleryImages = (folder, categoryName, enabled = true) => {
             );
             break;
           case "videos":
-            imageFiles = importAll(
-              require.context("../assets/videos", false, /\.(mp4|webm)$/i),
-            );
+            // Served from public/videos (not bundled by webpack) since these
+            // are large binary files that don't need JS-module processing.
+            imageFiles = [
+              "RUSH1.mp4",
+              "RUSH2.mp4",
+              "RUSH3.mp4",
+              "ephemeral.mp4",
+              "maincut4_3.mp4",
+            ].map((name) => `${process.env.PUBLIC_URL}/videos/${name}`);
             isVideo = true;
             break;
           case "photoshoots":

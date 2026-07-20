@@ -7,6 +7,27 @@ import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-video.css";
 import lgVideo from "lightgallery/plugins/video";
 
+function buildDynamicEl(images) {
+  return images.map((image) =>
+    image.isVideo
+      ? {
+          subHtml: image.title || "",
+          video: {
+            source: [{ src: image.original, type: "video/mp4" }],
+            attributes: {
+              preload: "metadata",
+              controls: true,
+              playsinline: true,
+            },
+          },
+        }
+      : {
+          src: image.original,
+          subHtml: image.alt || "",
+        },
+  );
+}
+
 function MasonryGallery({ images, category = "Gallery" }) {
   const [loadedImages, setLoadedImages] = useState(new Set());
   const galleryRef = useRef(null);
@@ -19,7 +40,8 @@ function MasonryGallery({ images, category = "Gallery" }) {
   useEffect(() => {
     if (galleryRef.current && !lightGalleryInstance.current) {
       lightGalleryInstance.current = lightGallery(galleryRef.current, {
-        selector: ".masonry-item",
+        dynamic: true,
+        dynamicEl: buildDynamicEl(images),
         speed: 500,
         download: false,
         plugins: [lgVideo],
@@ -33,8 +55,9 @@ function MasonryGallery({ images, category = "Gallery" }) {
         closable: true,
         enableSwipe: true,
         enableDrag: true,
+        // Hide prev/next arrows on mobile
         mobileSettings: {
-          controls: true,
+          controls: false,
           showCloseIcon: true,
           download: false,
         },
@@ -64,6 +87,10 @@ function MasonryGallery({ images, category = "Gallery" }) {
     };
   }, [images]);
 
+  const openLightbox = useCallback((index, element) => {
+    lightGalleryInstance.current?.openGallery(index, element);
+  }, []);
+
   const breakpointColumns = {
     default: 4,
     1200: 3,
@@ -78,27 +105,14 @@ function MasonryGallery({ images, category = "Gallery" }) {
         className="masonry-grid"
         columnClassName="masonry-column"
       >
-        {images.map((image) => (
+        {images.map((image, index) => (
           <a
             key={image.id}
-            href={image.isVideo ? "#" : image.original}
+            href={image.original || "#"}
             className="masonry-item"
-            data-src={image.original}
-            {...(image.isVideo && {
-              "data-video": JSON.stringify({
-                source: [{ src: image.original, type: "video/mp4" }],
-                attributes: {
-                  preload: "metadata",
-                  controls: true,
-                  playsinline: true,
-                },
-              }),
-            })}
             onClick={(e) => {
-              // Prevent default link behavior on mobile
-              if (image.isVideo) {
-                e.preventDefault();
-              }
+              e.preventDefault();
+              openLightbox(index, e.currentTarget);
             }}
           >
             <div className="masonry-image-container">
