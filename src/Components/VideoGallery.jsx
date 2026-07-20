@@ -58,10 +58,14 @@ function VideoGallery({ videos, category = "Videos" }) {
                   </video>
                 )}
                 <div className="video-overlay">
-                  <div className="play-icon">▶</div>
+                  <div className="video-overlay-content">
+                    <div className="play-icon">▶</div>
+                    {video.title && (
+                      <h3 className="video-title">{video.title}</h3>
+                    )}
+                  </div>
                 </div>
               </div>
-              {video.title && <h3 className="video-title">{video.title}</h3>}
             </motion.div>
           ))}
         </div>
