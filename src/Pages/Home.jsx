@@ -59,20 +59,43 @@ function Home() {
       url: "https://facesmag.com/fashion-editorials-en/berlin-rush-by-stela-alusi/",
     },
     {
-      name: "OFF TOWN",
-      url: "https://www.magcloud.com/browse/issue/3197263?__r=2937742",
-    },
-    // {
-    //   name: "KALTBLUT",
-    //   url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
-    // },
-    {
       name: "KALTBLUT",
-      url: "https://www.kaltblut-magazine.com/thomas-hanisch-fall-winter-2026-exos/?fbclid=PAZnRzaAP0WxlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacij4Xrhg3qE-VXje_0hrFiA7Ju-zQDsoPRe3XGwRHaZcHOZdDqc22Qoebz6g_aem_ecBAuRjYpAOFdtUYyAE-JQ",
+      feature: "Metamorphosis",
+      url: "https://www.kaltblut-magazine.com/myl-berlin-metamorphosis-spring-summer-2025/",
     },
     {
       name: "HARPER'S BAZAAR",
       url: "https://bazaarvietnam.vn/ve-dep-co-dien-kieu-quy-toc-xua/",
+    },
+    {
+      name: "KROBOS",
+      url: "https://krobos.de/",
+    },
+    {
+      name: "KALTBLUT",
+      feature: "Thomas Hanisch",
+      url: "https://www.kaltblut-magazine.com/thomas-hanisch-fall-winter-2026-exos/?fbclid=PAZnRzaAP0WxlleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacij4Xrhg3qE-VXje_0hrFiA7Ju-zQDsoPRe3XGwRHaZcHOZdDqc22Qoebz6g_aem_ecBAuRjYpAOFdtUYyAE-JQ",
+    },
+    {
+      name: "BERLIN FASHION FILM FESTIVAL",
+      url: "https://berlinfashionfilm.awardsengine.com/?action=ows%3Aentries.details&e=168495&project_year=2024",
+    },
+    {
+      name: "INSTYLE GREECE",
+      url: "https://www.instyle.gr/epikairotita/neo-tefchos-instyle-exclusive-synentefxeis-kai-oti-pr-8/",
+    },
+    {
+      name: "KALTBLUT",
+      feature: "Cunty Covergirl",
+      url: "https://www.kaltblut-magazine.com/cunty-covergirl/",
+    },
+    {
+      name: "FASHIONSNAP",
+      url: "https://www.fashionsnap.com/collection/myl-berlin/2025ss/",
+    },
+    {
+      name: "FASHION STREET BERLIN",
+      url: "https://www.fashionstreet-berlin.de/trey-spring-summer-2025-bfw-berlin/309070/",
     },
   ];
 
@@ -170,7 +193,7 @@ function Home() {
           </motion.div>
         </div>
       </motion.section>
-      {/* Social Proof - brand animations disabled on mobile */}
+      {/* Social Proof */}
       <motion.section
         className="social-proof"
         initial={{ opacity: 0 }}
@@ -179,35 +202,54 @@ function Home() {
       >
         <div className="content-section">
           <h2 className="section-title">As Seen In</h2>
-          <div className="brand-logos">
-            {brands.map((brand, index) => (
-              <motion.div
-                className="brand-logo"
-                key={index}
-                initial={
-                  isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
-                }
-                animate={{ opacity: 1, y: 0 }}
-                transition={
-                  isMobile
-                    ? { duration: 0 }
-                    : { duration: 0.5, delay: 0.6 + index * 0.1 }
-                }
-              >
-                {brand.url ? (
-                  <a
-                    href={brand.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="brand-link"
-                  >
-                    {brand.name}
-                  </a>
-                ) : (
-                  <span>{brand.name}</span>
-                )}
-              </motion.div>
-            ))}
+          <div className="brand-marquee">
+            <div className="brand-marquee-track">
+              {brands.map((brand, index) => (
+                <div className="brand-logo" key={`brand-${index}`}>
+                  {brand.url ? (
+                    <a
+                      href={brand.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="brand-link"
+                      onClick={(e) => e.currentTarget.blur()}
+                    >
+                      <span className="brand-name">{brand.name}</span>
+                      {brand.feature && (
+                        <span className="brand-feature">{brand.feature}</span>
+                      )}
+                    </a>
+                  ) : (
+                    <span>{brand.name}</span>
+                  )}
+                </div>
+              ))}
+              {brands.map((brand, index) => (
+                <div
+                  className="brand-logo"
+                  key={`brand-dup-${index}`}
+                  aria-hidden="true"
+                >
+                  {brand.url ? (
+                    <a
+                      href={brand.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="brand-link"
+                      tabIndex={-1}
+                      onClick={(e) => e.currentTarget.blur()}
+                    >
+                      <span className="brand-name">{brand.name}</span>
+                      {brand.feature && (
+                        <span className="brand-feature">{brand.feature}</span>
+                      )}
+                    </a>
+                  ) : (
+                    <span>{brand.name}</span>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </motion.section>

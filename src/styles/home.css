@@ -349,13 +349,47 @@
   background-color: #888;
 }
 
-/* Brand logos with more visual presence */
-.brand-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
+/* Brand logos - auto-scrolling marquee */
+.brand-marquee {
+  overflow: hidden;
   margin-top: 30px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 60px,
+    #000 calc(100% - 60px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 60px,
+    #000 calc(100% - 60px),
+    transparent 100%
+  );
+}
+
+.brand-marquee-track {
+  --brand-gap: 50px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: var(--brand-gap);
+  animation: brand-marquee-scroll 32s linear infinite;
+}
+
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee:focus-within .brand-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes brand-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - (var(--brand-gap) / 2)));
+  }
 }
 
 .brand-logo {
@@ -363,9 +397,30 @@
   color: #666;
   font-weight: 300;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
+  white-space: nowrap;
+  transition: color 0.3s ease;
   position: relative;
   padding-bottom: 5px;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-feature {
+  font-size: 0.85em;
+  color: #999;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.brand-feature:before {
+  content: "— ";
 }
 
 .brand-logo:after {
@@ -382,11 +437,22 @@
 
 .brand-logo:hover {
   color: #333;
-  transform: translateY(-2px);
 }
 
 .brand-logo:hover:after {
   width: 80%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .brand-marquee-track [aria-hidden="true"] {
+    display: none;
+  }
 }
 
 /* Responsive Styles */
