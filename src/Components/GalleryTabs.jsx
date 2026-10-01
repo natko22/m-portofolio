@@ -6,7 +6,7 @@ import { useGalleryImages } from "../hooks/useGalleryImage";
 import "../styles/gallery-tabs.css";
 
 function GalleryTabs() {
-  const [activeTab, setActiveTab] = useState("covers");
+  const [activeTab, setActiveTab] = useState("editorial");
 
   const { images: coversImages, isLoading: coversLoading } = useGalleryImages(
     "covers",
@@ -28,16 +28,16 @@ function GalleryTabs() {
 
   const categories = [
     {
-      id: "covers",
-      label: "Covers",
-      images: coversImages,
-      isLoading: coversLoading,
-    },
-    {
       id: "editorial",
       label: "Editorial",
       images: editorialImages,
       isLoading: editorialLoading,
+    },
+    {
+      id: "photoshoots",
+      label: "Photoshoots",
+      images: photoshootsImages,
+      isLoading: photoshootsLoading,
     },
     {
       id: "videos",
@@ -46,10 +46,10 @@ function GalleryTabs() {
       isLoading: videosLoading,
     },
     {
-      id: "photoshoots",
-      label: "Photoshoots",
-      images: photoshootsImages,
-      isLoading: photoshootsLoading,
+      id: "covers",
+      label: "Covers",
+      images: coversImages,
+      isLoading: coversLoading,
     },
   ];
 
