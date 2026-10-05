@@ -56,6 +56,15 @@ export const useGalleryImages = (folder, categoryName, enabled = true) => {
               ),
             );
             break;
+          case "bridal":
+            imageFiles = importAll(
+              require.context(
+                "../assets/bridal",
+                false,
+                /\.(jpg|jpeg|png|webp)$/i,
+              ),
+            );
+            break;
           default:
             imageFiles = [];
         }
