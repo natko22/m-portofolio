@@ -11,7 +11,7 @@ function GalleryTabs() {
   const { images: coversImages, isLoading: coversLoading } = useGalleryImages(
     "covers",
     "Covers",
-    activeTab === "covers",
+    activeTab === "covers"
   );
 
   const { images: editorialImages, isLoading: editorialLoading } =
@@ -20,17 +20,11 @@ function GalleryTabs() {
   const { images: videosImages, isLoading: videosLoading } = useGalleryImages(
     "videos",
     "Videos",
-    activeTab === "videos",
+    activeTab === "videos"
   );
 
   const { images: photoshootsImages, isLoading: photoshootsLoading } =
     useGalleryImages("photoshoots", "Photoshoots", activeTab === "photoshoots");
-
-  // const { images: bridalImages, isLoading: bridalLoading } = useGalleryImages(
-  //   "bridal",
-  //   "Bridal",
-  //   activeTab === "bridal",
-  // );
 
   const categories = [
     {
@@ -57,12 +51,6 @@ function GalleryTabs() {
       images: coversImages,
       isLoading: coversLoading,
     },
-    // {
-    //   id: "bridal",
-    //   label: "Bridal",
-    //   images: bridalImages,
-    //   isLoading: bridalLoading,
-    // },
   ];
 
   const activeCategory = categories.find((c) => c.id === activeTab);
@@ -102,8 +90,6 @@ function GalleryTabs() {
                   <span></span>
                 </div>
               </div>
-            ) : activeCategory.images.length === 0 ? (
-              <div className="gallery-empty-state"></div>
             ) : activeTab === "videos" ? (
               <VideoGallery
                 videos={activeCategory.images}

@@ -401,17 +401,9 @@
   .hero-section {
     padding: 100px 0 60px;
   }
-  .cta-button {
-    flex-direction: column;
-    width: 100%;
-  }
-
   .cta-button .btn {
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-size: 0.7rem;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
   }
 
   .testimonial-container {

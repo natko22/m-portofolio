@@ -153,9 +153,6 @@ function Home() {
           >
             <h1 className="hero-main-title">Manto Kamari</h1>
             <p className="hero-subtitle">Makeup & Hair Stylist</p>
-            <p className="hero-specialties">
-              Bridal · Editorial · Private Events
-            </p>
           </motion.div>
 
           {/* Large Hero Image */}
@@ -177,9 +174,7 @@ function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                Makeup and hair artistry for every story — from bridal
-                mornings to editorial sets
-                {/* From your most important day to your boldest shoot — beauty, done right */}
+                Transforming faces into art with precision and passion
               </motion.p>
               <motion.div
                 className="cta-button"
@@ -188,14 +183,11 @@ function Home() {
                 transition={{ duration: 0.8, delay: 1 }}
               >
                 <a
-                  href="mailto:mantwkamari@gmail.com?subject=Bridal Booking Inquiry&body=Hi Manto, I'm interested in booking bridal hair and makeup. Please let me know your availability and rates."
+                  href="mailto:mantwkamari@gmail.com?subject=Booking Inquiry&body=Hi Manto, I'm interested in booking a makeup session. Please let me know your availability and rates."
                   className="btn"
                 >
-                  Book a Bridal Consultation
+                  Book Your Session
                 </a>
-                <Link to="/gallery" className="btn btn-secondary">
-                  View Full Gallery
-                </Link>
               </motion.div>
             </div>
           </motion.div>
